@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Why try Harry’s?",
+        "bulletPoints": [
+            "Our razors are designed to deliver a close, comfortable shave",
+            "By owning our factory, we cut out the middleman and sell direct to you. The result: high-quality blades at honest and fair prices, all year round",
+            "We’ve created the Harry’s Trial Set offer to make it easy and risk-free to try our products, because we know that switching to a new razor can feel daunting",
+            "Your Shave Plan is always customised to your needs - it’s easy to pause, modify, or cancel at anytime with just a few clicks (and our full product range is always available to buy as one-off purchases on our website)"
+        ],
+        "image": "someImageUrl"
+    },
+    {
+        "title": "Why try Harry’s?",
+        "bulletPoints": [
+            "Our razors are designed to deliver a close, comfortable shave",
+            "By owning our factory, we cut out the middleman and sell direct to you. The result: high-quality blades at honest and fair prices, all year round",
+            "We’ve created the Harry’s Trial Set offer to make it easy and risk-free to try our products, because we know that switching to a new razor can feel daunting",
+            "Your Shave Plan is always customised to your needs - it’s easy to pause, modify, or cancel at anytime with just a few clicks (and our full product range is always available to buy as one-off purchases on our website)"
+        ],
+        "image": "someImageUrl",
+        "imagePosition": "right"
+    },
+    {
+        "title": "Why try Harry’s?",
+        "bulletPoints": [
+            "Our razors are designed to deliver a close, comfortable shave",
+            "By owning our factory, we cut out the middleman and sell direct to you. The result: high-quality blades at honest and fair prices, all year round",
+            "We’ve created the Harry’s Trial Set offer to make it easy and risk-free to try our products, because we know that switching to a new razor can feel daunting",
+            "Your Shave Plan is always customised to your needs - it’s easy to pause, modify, or cancel at anytime with just a few clicks (and our full product range is always available to buy as one-off purchases on our website)"
+        ],
+        "image": "someImageUrl"
+    }
+]

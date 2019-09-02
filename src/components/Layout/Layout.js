@@ -1,0 +1,46 @@
+/**
+ * Layout component that queries for data
+ * with Gatsby's StaticQuery component
+ *
+ * See: https://www.gatsbyjs.org/docs/static-query/
+ */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+
+import Header from 'components/Header';
+import './Layout.css';
+
+const Layout = ({ children, currentPage }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
+        <Header siteTitle={data.site.siteMetadata.title} currentPage={currentPage} />
+        <div
+          style={{
+            margin: '0 auto',
+          }}
+        >
+          <main>{children}</main>
+        </div>
+      </>
+    )}
+  />
+);
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  currentPage: PropTypes.string.isRequired,
+};
+
+export default Layout;

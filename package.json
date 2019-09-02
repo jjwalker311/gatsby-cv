@@ -5,20 +5,42 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9",
+    "classnames": "^2.2.6",
     "gatsby": "^2.1.31",
+    "gatsby-background-image": "^0.8.3",
     "gatsby-image": "^2.0.33",
+    "gatsby-plugin-emotion": "^4.0.6",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.9",
+    "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-sharp": "^2.0.28",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-remark-embed-video": "^1.7.1",
     "gatsby-source-filesystem": "^2.0.24",
+    "gatsby-transformer-remark": "^2.3.7",
     "gatsby-transformer-sharp": "^2.1.17",
+    "i18next": "^15.0.7",
+    "i18next-browser-languagedetector": "^3.0.1",
+    "intersection-observer": "^0.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-i18next": "^10.5.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.15.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10",
     "prettier": "^1.16.4"
   },
   "keywords": [
@@ -31,7 +53,9 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "jest",
+    "lint:js": "eslint \"src/**/*.js\"",
+    "lint": "npm run lint:js"
   },
   "repository": {
     "type": "git",
