@@ -9,7 +9,7 @@ export default function BackgroundSection({ children }) {
     <StaticQuery
       query={graphql`
             query {
-                desktop: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+                desktop: file(relativePath: { eq: "homepage-background.jpg" }) {
                 childImageSharp {
                     fluid(quality: 90, maxWidth: 4160) {
                     ...GatsbyImageSharpFluid_withWebp
@@ -26,6 +26,9 @@ export default function BackgroundSection({ children }) {
             Tag="section"
             fluid={imageData}
             backgroundColor="#040e18"
+            style={{
+              height: 'calc(100vh - 55px)',
+            }}
           >
             { children }
           </BackgroundImage>

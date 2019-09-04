@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ResponsivePanel from 'components/ResponsivePanel';
+import Edinburgh from 'components/Images/Edinburgh';
+
 
 import renderLeftOrRight from 'helpers/leftOrRight';
 
@@ -30,7 +32,7 @@ export default function BulletedImage({ image, imagePosition, ...props }) {
   return (
     <div>
       <ResponsivePanel responsiveStructure="1fr 1fr">
-        { renderLeftOrRight(<BulletList {...props} />, <div>{image}</div>, imagePosition) }
+        { renderLeftOrRight(<BulletList {...props} />, <div><Edinburgh /></div>, imagePosition) }
       </ResponsivePanel>
     </div>
   );

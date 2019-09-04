@@ -8,6 +8,9 @@ import { BREAKPOINTS, COLOURS, PAGES } from 'constants';
 import * as PROP_TYPES from 'constants/propTypes';
 
 import Hamburger from 'components/Hamburger';
+import Signature from 'components/Images/Signature';
+import MobileSignature from 'components/Images/MobileSignature';
+
 
 const { t } = useTranslation();
 
@@ -36,8 +39,9 @@ const StyledNav = ({ tabs, ...props }) => (
     css={css`
           padding: 12px 0;
           background: ${COLOURS.LIGHT};
+          border-bottom: 1px solid ${COLOURS.BORDER};
           @media (min-width: ${BREAKPOINTS.TABLET}px) {
-            padding: 26px 0;
+            padding: 4px 0;
           }
         `}
     {...props}
@@ -51,7 +55,7 @@ StyledNav.propTypes = {
 const NthColumn = ({ n, children }) => (
   <div
     css={css`
-      grid-column: ${n};
+      grid-column: ${n + 2};
       display: none;
       @media (min-width: ${BREAKPOINTS.TABLET}px) {
         display: block;
@@ -67,42 +71,80 @@ NthColumn.propTypes = {
   n: PropTypes.number.isRequired,
 };
 
-const Header = ({ tabs, currentPage }) => (
-  <header>
-    <StyledNav tabs={tabs} role="navigation">
-      <div
-        css={css`
+const Header = ({ tabs, currentPage }) => {
+  // First column with Signature
+  const columns = [
+    <NthColumn n={0}>
+      <Link to="/">
+        <Signature />
+      </Link>
+    </NthColumn>,
+  ];
+
+  // Remaining columns driven from props
+  tabs.map(({ caption, link, page }, index) => {
+    (
+      columns.push(
+        <NthColumn n={index + 1} key={caption}>
+          <StyledLink to={link} isSelected={currentPage === page}>
+            {caption}
+          </StyledLink>
+        </NthColumn>,
+      )
+    );
+  });
+
+  const displayOnMobile = `display: flex;
+  @media (min-width: ${BREAKPOINTS.TABLET}px) {
+    display: none;
+  }`;
+
+  return (
+    <header>
+      <StyledNav tabs={tabs} role="navigation">
+
+        <div
+          css={css`
         display: grid;
-        grid-template-columns: repeat(${tabs.length}, 1fr);
+        grid-template-columns: 1fr 2fr repeat(${tabs.length}, 1fr);
         grid-auto-rows: auto;
         grid-gap: 1em;
         align-items: center;
         text-align: center;
+        width: 50%;
         `}
-      >
-        {
-        tabs.map(({ caption, link, page }, index) => (
-          <NthColumn n={index + 1} key={`${caption}-${index}`}>
-            <StyledLink to={link} isSelected={currentPage === page}>
-              {caption}
-            </StyledLink>
-          </NthColumn>
-        ))
-      }
-
-      </div>
-      <Hamburger>
-        {
+        >
+          { columns }
+        </div>
+        <Hamburger>
+          {
           tabs.map(({ caption, link }) => (
             <StyledLink to={link}>
-              <li>{caption}</li>
+              <li css={css`border-bottom: 1px solid ${COLOURS.BORDER};`}>{caption}</li>
             </StyledLink>
           ))
         }
-      </Hamburger>
-    </StyledNav>
-  </header>
-);
+        </Hamburger>
+        <div
+          css={css`
+            position: absolute;
+            top: 0;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center; 
+            ${displayOnMobile}
+          `}
+        >
+          <Link to="/">
+            <MobileSignature />
+          </Link>
+        </div>
+      </StyledNav>
+    </header>
+  );
+};
 
 Header.propTypes = {
   tabs: PROP_TYPES.TABS,

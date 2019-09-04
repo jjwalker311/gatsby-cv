@@ -91,7 +91,6 @@ export function HamburgerMenu({ children }) {
           transform-origin: 0% 0%;
           transform: translate(-100%, 0);
           transition: transform 0.6s cubic-bezier(0.77,0.2,0.05,1.0);
-          border-bottom: 1px solid ${COLOURS.SECONDARY};
         `}
     >
       {children}

@@ -25,7 +25,7 @@ export default function ResponsivePanel(props) {
                 display: grid;
                 grid-template-columns: ${responsiveStructure};
                 grid-auto-rows: auto;
-                grid-gap: 1em;
+                grid-gap: 0;
               }
             `}
       >
