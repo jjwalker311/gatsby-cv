@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
-import { BREAKPOINTS } from 'constants';
+import BREAKPOINTS from 'constants/breakpoints';
 
 export default function ResponsivePanel(props) {
   const {

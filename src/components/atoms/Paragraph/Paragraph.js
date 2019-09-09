@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
-import { COLOURS, BREAKPOINTS } from 'constants';
+import COLOURS from 'constants/colours';
+import BREAKPOINTS from 'constants/breakpoints';
 
 export default function Paragraph(props) {
   const {

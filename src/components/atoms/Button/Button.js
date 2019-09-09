@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
-import { COLOURS, FONT_SIZES, FONT_TRANSFORM } from 'constants';
+import COLOURS from 'constants/colours';
+import FONT_SIZES from 'constants/fontSizes';
+import FONT_TRANSFORM from 'constants/fontTransform';
 
 export default function Button(props) {
   const {

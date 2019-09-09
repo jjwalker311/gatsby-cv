@@ -9,7 +9,8 @@ import BulletedImage from 'components/molecules/BulletedImage';
 import ResponsiveCTA from 'components/molecules/ResponsiveCTA';
 import HomeBackground from 'components/atoms/Images/HomeBackground';
 
-import { PAGES_URL, PAGES } from 'constants';
+import PAGES from 'constants/pages';
+import PAGES_URL from 'constants/pageUrl';
 
 import EducationIcon from 'assets/education.svg';
 import WorkIcon from 'assets/work.svg';

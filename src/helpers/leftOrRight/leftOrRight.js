@@ -1,4 +1,4 @@
-import { POSITION } from 'constants';
+import POSITION from 'constants/positions';
 
 /**
  * Places a component either before/after another

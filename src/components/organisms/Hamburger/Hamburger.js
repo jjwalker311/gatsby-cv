@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 
-import { BREAKPOINTS } from 'constants';
+import BREAKPOINTS from 'constants/breakpoints';
 import * as PROP_TYPES from 'constants/propTypes';
 
 import { HamburgerSpan, HamburgerInput, HamburgerMenu } from './styledChildren';

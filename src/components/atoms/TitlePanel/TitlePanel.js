@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/core';
 
-import { BREAKPOINTS, COLOURS } from 'constants';
+import COLOURS from 'constants/colours';
+import BREAKPOINTS from 'constants/breakpoints';
+
 
 export default function TitlePanel({ title, backgroundColour, textColour }) {
   return (

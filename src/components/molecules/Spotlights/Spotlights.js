@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import * as PROP_TYPES from 'constants/propTypes';
-import { BREAKPOINTS, COLOURS, POSITION } from 'constants';
+import COLOURS from 'constants/colours';
+import POSITION from 'constants/positions';
+import BREAKPOINTS from 'constants/breakpoints';
 
 import ResponsivePanel from 'components/molecules/ResponsivePanel';
 import Heading from 'components/atoms/Heading';

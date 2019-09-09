@@ -4,9 +4,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { css } from '@emotion/core';
 
-import {
-  BREAKPOINTS, COLOURS, PAGES, PAGES_URL,
-} from 'constants';
+import BREAKPOINTS from 'constants/breakpoints';
+import COLOURS from 'constants/colours';
+import PAGES_URL from 'constants/pageUrl';
+
 import * as PROP_TYPES from 'constants/propTypes';
 
 import Hamburger from 'components/organisms/Hamburger';
@@ -154,10 +155,14 @@ Header.propTypes = {
 
 Header.defaultProps = {
   tabs: [
-    { caption: t('Employment'), link: '/employment', page: PAGES.EMPLOYMENT },
-    { caption: t('Skills'), link: '/skills/', page: PAGES.SKILLS },
-    { caption: t('Education'), link: '/education/', page: PAGES.EDUCATION },
-    { caption: t('Personal'), link: '/personal/', page: PAGES.ABOUT_ME },
+    // { caption: t('Employment'), link: '/employment', page: PAGES.EMPLOYMENT },
+    // { caption: t('Skills'), link: '/skills/', page: PAGES.SKILLS },
+    // { caption: t('Education'), link: '/education/', page: PAGES.EDUCATION },
+    // { caption: t('Personal'), link: '/personal/', page: PAGES.ABOUT_ME },
+    { caption: t('Employment'), link: '/employment', page: 'EMPLOYMENT' },
+    { caption: t('Skills'), link: '/skills/', page: 'EMPLOYMENT'  },
+    { caption: t('Education'), link: '/education/', page: 'EMPLOYMENT'  },
+    { caption: t('Personal'), link: '/personal/', page: 'EMPLOYMENT'  },
   ],
 };
 

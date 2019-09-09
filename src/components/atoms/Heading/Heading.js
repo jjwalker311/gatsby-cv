@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
-import { COLOURS, POSITION } from 'constants';
+import POSITION from 'constants/positions';
+import COLOURS from 'constants/colours';
 
 export default function Heading(props) {
   const {

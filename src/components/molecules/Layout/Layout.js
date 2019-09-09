@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { css } from '@emotion/core';
 
-import { BREAKPOINTS, COLOURS } from 'constants';
+import COLOURS from 'constants/colours';
 
 import Header from 'components/organisms/Header';
 import './Layout.css';

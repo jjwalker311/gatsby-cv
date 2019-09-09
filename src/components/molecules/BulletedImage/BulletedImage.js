@@ -6,7 +6,8 @@ import ResponsivePanel from 'components/molecules/ResponsivePanel';
 
 import renderLeftOrRight from 'helpers/leftOrRight';
 
-import { POSITION, BREAKPOINTS } from 'constants';
+import BREAKPOINTS from 'constants/breakpoints';
+import POSITION from 'constants/positions';
 
 /**
  * Wrapper to ensure the Image always appears first in the Grid

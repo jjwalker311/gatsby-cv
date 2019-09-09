@@ -10,9 +10,13 @@ import Paragraph from 'components/atoms/Paragraph';
 
 import renderLeftOrRight from 'helpers/leftOrRight';
 
-import {
-  BREAKPOINTS, POSITION, FONT_TRANSFORM, PAGES, COLOURS, PAGES_URL,
-} from 'constants';
+import BREAKPOINTS from 'constants/breakpoints';
+import POSITION from 'constants/positions';
+import FONT_TRANSFORM from 'constants/fontTransform';
+import PAGES from 'constants/pages';
+import COLOURS from 'constants/colours';
+import PAGES_URL from 'constants/pageUrl';
+
 import { CENTRE_CENTRE } from 'helpers/cssSnippets';
 
 function CallToAction({
@@ -46,7 +50,6 @@ function CallToAction({
 
 CallToAction.propTypes = {
   buttonCaption: PropTypes.string.isRequired,
-  buttonOnClick: PropTypes.func.isRequired,
   title: PropTypes.string,
   description: PropTypes.string,
 };
