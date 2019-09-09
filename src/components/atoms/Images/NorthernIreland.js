@@ -2,11 +2,11 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-const Image = () => (
+const NorthernIreland = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "edinburgh.jpg" }) {
+        placeholderImage: file(relativePath: { eq: "northern-ireland.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
@@ -15,9 +15,8 @@ const Image = () => (
         }
       }
     `}
-    render={data => <Img  style={{maxHeight: '100vh'}} fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => <Img style={{ maxHeight: '100vh' }} fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
 );
 
-export default Image;
-
+export default NorthernIreland;

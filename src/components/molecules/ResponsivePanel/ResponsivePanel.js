@@ -19,13 +19,13 @@ export default function ResponsivePanel(props) {
         css={css`
               align-items: ${itemAlign};
               text-align: ${textAlign};
-              height: 100vh;
               align-items: center;
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-auto-rows: auto;
+              grid-gap: 0;
               @media (min-width: ${breakpointAction}px) {
-                display: grid;
                 grid-template-columns: ${responsiveStructure};
-                grid-auto-rows: auto;
-                grid-gap: 0;
               }
             `}
       >

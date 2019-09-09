@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from 'gatsby';
 
 import BackgroundImage from 'gatsby-background-image';
 
-export default function BackgroundSection({ children }) {
+export default function HomeBackground({ children }) {
   return (
     <StaticQuery
       query={graphql`
@@ -39,6 +39,6 @@ export default function BackgroundSection({ children }) {
   );
 }
 
-BackgroundSection.propTypes = {
+HomeBackground.propTypes = {
   children: PropTypes.node.isRequired,
 };

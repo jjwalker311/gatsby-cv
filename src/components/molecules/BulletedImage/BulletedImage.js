@@ -1,18 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { css } from '@emotion/core';
 
-import ResponsivePanel from 'components/ResponsivePanel';
-import Edinburgh from 'components/Images/Edinburgh';
-
+import ResponsivePanel from 'components/molecules/ResponsivePanel';
 
 import renderLeftOrRight from 'helpers/leftOrRight';
 
-import { POSITION } from 'constants';
+import { POSITION, BREAKPOINTS } from 'constants';
 
+/**
+ * Wrapper to ensure the Image always appears first in the Grid
+ * @param  {object} {children}
+ */
+function ImageWrapper({ children }) {
+  return (
+    <div
+      css={css`
+        grid-row: 1 / auto;
+        @media (min-width: ${BREAKPOINTS.TABLET}px) {
+          grid-row: auto;
+        }
+      `}
+    >
+      { children }
+    </div>
+  );
+}
 
+ImageWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+/**
+ * Maps Array of bullet points
+ */
 function BulletList({ title, bulletPoints }) {
   return (
-    <div>
+    <div style={{ margin: '1em' }}>
       <h2>{title}</h2>
       <ul>
         {
@@ -32,7 +56,15 @@ export default function BulletedImage({ image, imagePosition, ...props }) {
   return (
     <div>
       <ResponsivePanel responsiveStructure="1fr 1fr">
-        { renderLeftOrRight(<BulletList {...props} />, <div><Edinburgh /></div>, imagePosition) }
+        {
+          renderLeftOrRight(
+            <BulletList {...props} />,
+            <ImageWrapper>
+              { image }
+            </ImageWrapper>,
+            imagePosition,
+          )
+        }
       </ResponsivePanel>
     </div>
   );

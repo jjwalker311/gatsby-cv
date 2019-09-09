@@ -8,8 +8,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
+import { css } from '@emotion/core';
 
-import Header from 'components/Header';
+import { BREAKPOINTS } from 'constants';
+
+import Header from 'components/organisms/Header';
 import './Layout.css';
 
 const Layout = ({ children, currentPage }) => (
@@ -27,12 +30,15 @@ const Layout = ({ children, currentPage }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} currentPage={currentPage} />
         <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
+          css={css`
+            margin: 0 auto;
+            max-width: 960px;
+            padding: 0;
+            @media (min-width: ${BREAKPOINTS.TABLET}px) {
+              padding: 0px 1.0875rem 1.45rem;
+              paddingTop: 0,
+            }
+          `}
         >
           <main>{children}</main>
         </div>

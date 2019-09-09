@@ -4,13 +4,16 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { css } from '@emotion/core';
 
-import { BREAKPOINTS, COLOURS, PAGES } from 'constants';
+import {
+  BREAKPOINTS, COLOURS, PAGES, PAGES_URL,
+} from 'constants';
 import * as PROP_TYPES from 'constants/propTypes';
 
-import Hamburger from 'components/Hamburger';
-import Signature from 'components/Images/Signature';
-import MobileSignature from 'components/Images/MobileSignature';
+import Hamburger from 'components/organisms/Hamburger';
+import Signature from 'components/atoms/Images/Signature';
+import MobileSignature from 'components/atoms/Images/MobileSignature';
 
+import { CENTRE_CENTRE } from 'helpers/cssSnippets';
 
 const { t } = useTranslation();
 
@@ -82,11 +85,11 @@ const Header = ({ tabs, currentPage }) => {
   ];
 
   // Remaining columns driven from props
-  tabs.map(({ caption, link, page }, index) => {
+  tabs.forEach(({ caption, page }, index) => {
     (
       columns.push(
         <NthColumn n={index + 1} key={caption}>
-          <StyledLink to={link} isSelected={currentPage === page}>
+          <StyledLink to={PAGES_URL[page]} isSelected={currentPage === page}>
             {caption}
           </StyledLink>
         </NthColumn>,
@@ -109,8 +112,7 @@ const Header = ({ tabs, currentPage }) => {
         grid-template-columns: 1fr 2fr repeat(${tabs.length}, 1fr);
         grid-auto-rows: auto;
         grid-gap: 1em;
-        align-items: center;
-        text-align: center;
+        ${CENTRE_CENTRE}
         width: 50%;
         `}
         >
@@ -131,9 +133,8 @@ const Header = ({ tabs, currentPage }) => {
             top: 0;
             height: 55px;
             display: flex;
-            align-items: center;
+            ${CENTRE_CENTRE}
             width: 100%;
-            justify-content: center; 
             ${displayOnMobile}
           `}
         >
@@ -153,7 +154,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   tabs: [
-    { caption: t('Employment'), link: '/employment/', page: PAGES.EMPLOYMENT },
+    { caption: t('Employment'), link: '/employment', page: PAGES.EMPLOYMENT },
     { caption: t('Skills'), link: '/skills/', page: PAGES.SKILLS },
     { caption: t('Education'), link: '/education/', page: PAGES.EDUCATION },
     { caption: t('Personal'), link: '/personal/', page: PAGES.ABOUT_ME },

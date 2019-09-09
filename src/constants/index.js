@@ -11,11 +11,20 @@ export const PAGES = {
   ABOUT_ME: 'ABOUT_ME',
 };
 
+export const PAGES_URL = {
+  [PAGES.HOME]: '/',
+  [PAGES.EMPLOYMENT]: '/employment',
+  [PAGES.SKILLS]: '/skills',
+  [PAGES.EDUCATION]: '/education',
+  [PAGES.ABOUT_ME]: '/personal',
+};
+
 export const POSITION = {
   LEFT: 'left',
   RIGHT: 'right',
   TOP: 'top',
   BOTTOM: 'bottom',
+  CENTER: 'center',
 };
 
 export const COLOURS = {
@@ -32,4 +41,20 @@ export const COLOURS = {
     HOVER: '#4E768E',
     SELECTED: '#185674',
   },
+  BUTTON: {
+    DEFAULT: '#d1461c',
+    HOVER: '#a63614',
+  },
+};
+
+export const FONT_SIZES = {
+  SMALL: '',
+  MEDIUM: '13px',
+  LARGE: '',
+};
+
+export const FONT_TRANSFORM = {
+  UPPER: 'uppercase',
+  LOWER: 'lowercase',
+  NONE: 'none',
 };
