@@ -36,6 +36,9 @@ export const COLOURS = {
   LIGHT: '#ffffff',
   DARK: '#404040',
   BORDER: '#bfbfbf',
+  BACKGROUND: {
+    DEFAULT: 'f7f7f7',
+  },
   TEXT: {
     DEFAULT: '#868686',
     HOVER: '#4E768E',

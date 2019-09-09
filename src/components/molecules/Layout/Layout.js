@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { css } from '@emotion/core';
 
-import { BREAKPOINTS } from 'constants';
+import { BREAKPOINTS, COLOURS } from 'constants';
 
 import Header from 'components/organisms/Header';
 import './Layout.css';
@@ -27,22 +27,19 @@ const Layout = ({ children, currentPage }) => (
       }
     `}
     render={data => (
-      <>
+      <div style={{ background: COLOURS.BACKGROUND.DEFAULT }}>
         <Header siteTitle={data.site.siteMetadata.title} currentPage={currentPage} />
         <div
           css={css`
             margin: 0 auto;
-            max-width: 960px;
+            max-width: 1080px;
             padding: 0;
-            @media (min-width: ${BREAKPOINTS.TABLET}px) {
-              padding: 0px 1.0875rem 1.45rem;
-              paddingTop: 0,
-            }
+            background: ${COLOURS.LIGHT};
           `}
         >
           <main>{children}</main>
         </div>
-      </>
+      </div>
     )}
   />
 );
