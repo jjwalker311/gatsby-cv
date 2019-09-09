@@ -160,9 +160,9 @@ Header.defaultProps = {
     // { caption: t('Education'), link: '/education/', page: PAGES.EDUCATION },
     // { caption: t('Personal'), link: '/personal/', page: PAGES.ABOUT_ME },
     { caption: t('Employment'), link: '/employment', page: 'EMPLOYMENT' },
-    { caption: t('Skills'), link: '/skills/', page: 'EMPLOYMENT'  },
-    { caption: t('Education'), link: '/education/', page: 'EMPLOYMENT'  },
-    { caption: t('Personal'), link: '/personal/', page: 'EMPLOYMENT'  },
+    { caption: t('Skills'), link: '/skills/', page: 'EMPLOYMENT' },
+    { caption: t('Education'), link: '/education/', page: 'EMPLOYMENT' },
+    { caption: t('Personal'), link: '/personal/', page: 'EMPLOYMENT' },
   ],
 };
 

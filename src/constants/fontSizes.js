@@ -4,4 +4,4 @@ const FONT_SIZES = {
   LARGE: '',
 };
 
-export default FONT_SIZES
+export default FONT_SIZES;

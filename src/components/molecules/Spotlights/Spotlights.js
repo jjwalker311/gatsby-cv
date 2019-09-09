@@ -12,7 +12,9 @@ import Heading from 'components/atoms/Heading';
 import Paragraph from 'components/atoms/Paragraph';
 
 
-function Spotlight({ SVG, header, message, link }) {
+function Spotlight({
+  SVG, header, message, link,
+}) {
   return (
     <div style={{ margin: '0 1em' }}>
       <Link to={link}>
