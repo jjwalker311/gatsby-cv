@@ -81,6 +81,8 @@ export default function FrequentlyAskedQuestions({ title, content }) {
 }
 
 FrequentlyAskedQuestions.propTypes = {
+  // Title for FAQ section
   title: PropTypes.string.isRequired,
+  // Array of FAQ questions and answers
   content: PropTypes.arrayOf(FAQ_CONTENT).isRequired,
 };

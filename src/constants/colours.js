@@ -1,9 +1,6 @@
 export const COLOURS = {
   PRIMARY: '#5F464B',
   SECONDARY: '#8E4A49',
-  TERTIARY: '#7DAA92',
-  QUATERNARY: '#80FFEC',
-  QUINARY: '#C2FBEF',
   LIGHT: '#ffffff',
   DARK: '#404040',
   BORDER: '#bfbfbf',
@@ -11,6 +8,7 @@ export const COLOURS = {
     DEFAULT: '#f7f7f7',
     BLUE: '#6a8fa4',
     DARK_BLUE: '#4e768d',
+    REALLY_DARK_BLUE: '#0d3b5a',
   },
   TEXT: {
     DEFAULT: '#868686',

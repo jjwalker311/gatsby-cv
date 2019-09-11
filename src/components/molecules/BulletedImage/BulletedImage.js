@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
+import Heading from 'components/atoms/Heading';
+
 import ResponsivePanel from 'components/molecules/ResponsivePanel';
 
 import renderLeftOrRight from 'helpers/leftOrRight';
 
 import BREAKPOINTS from 'constants/breakpoints';
 import POSITION from 'constants/positions';
+import COLOURS from 'constants/colours';
 
 /**
  * Wrapper to ensure the Image always appears first in the Grid
@@ -35,13 +38,15 @@ ImageWrapper.propTypes = {
 /**
  * Maps Array of bullet points
  */
-function BulletList({ title, bulletPoints }) {
+function BulletList({
+  title, bulletPoints, textColour,
+}) {
   return (
-    <div style={{ margin: '1em' }}>
-      <h2>{title}</h2>
+    <div style={{ padding: '1em' }}>
+      <Heading level={2} colour={textColour}>{title}</Heading>
       <ul>
         {
-            bulletPoints.map(point => <li>{point}</li>)
+            bulletPoints.map(point => <li style={{ color: textColour }}>{point}</li>)
         }
       </ul>
     </div>
@@ -49,13 +54,19 @@ function BulletList({ title, bulletPoints }) {
 }
 
 BulletList.propTypes = {
+  // Title of section
   title: PropTypes.string.isRequired,
+  // Array of bullet points
   bulletPoints: PropTypes.arrayOf(PropTypes.string).isRequired,
+  // Colour of text
+  textColour: PropTypes.string.isRequired,
 };
 
-export default function BulletedImage({ image, imagePosition, ...props }) {
+export default function BulletedImage({
+  image, imagePosition, backgroundColour, ...props
+}) {
   return (
-    <div>
+    <div style={{ background: backgroundColour }}>
       <ResponsivePanel responsiveStructure="1fr 1fr">
         {
           renderLeftOrRight(
@@ -72,12 +83,23 @@ export default function BulletedImage({ image, imagePosition, ...props }) {
 }
 
 BulletedImage.propTypes = {
-  title: PropTypes.string.isRequired,
-  bulletPoints: PropTypes.string.isRequired,
+  // Image to display alongside BulletPoints
   image: PropTypes.string.isRequired,
+  // Image position, either LEFT or RIGHT
   imagePosition: PropTypes.oneOf([POSITION.LEFT, POSITION.RIGHT]),
+  // Title of section
+  title: PropTypes.string.isRequired,
+  // Array of bullet points
+  bulletPoints: PropTypes.arrayOf(PropTypes.string),
+  // Colour of the background
+  backgroundColour: PropTypes.string,
+  // Colour of text
+  textColour: PropTypes.string,
 };
 
 BulletedImage.defaultProps = {
   imagePosition: POSITION.LEFT,
+  bulletPoints: [],
+  backgroundColour: COLOURS.LIGHT,
+  textColour: COLOURS.DARK,
 };

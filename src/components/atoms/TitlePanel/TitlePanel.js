@@ -14,29 +14,26 @@ export default function TitlePanel({
   title, backgroundColour, textColour, description,
 }) {
   return (
-    <div>
-      <div
-        css={css`
+    <div
+      css={css`
             text-align: center;
             height: 100%;
-            padding: 6em 0;
+            padding: 6em 1em;
             background-color: ${backgroundColour};
             @media (min-width: ${BREAKPOINTS.TABLET}px) {
               padding: 2em 0;
             }
         `}
-      >
-        <Heading css={css`color: ${textColour};`} level={2}>
-          { title }
-        </Heading>
+    >
+      <Heading css={css`color: ${textColour};`} level={2}>
+        { title }
+      </Heading>
 
-        <If condition={description}>
-          <Paragraph colour={textColour}>
-            { description }
-          </Paragraph>
-        </If>
-      </div>
-
+      <If condition={description}>
+        <Paragraph colour={textColour}>
+          { description }
+        </Paragraph>
+      </If>
     </div>
   );
 }

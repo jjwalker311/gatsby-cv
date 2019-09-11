@@ -31,9 +31,9 @@ function CallToAction({
       height: calc(100vh - 55px);
       margin: 2em;
   `}>
-      <div style={{ paddingBottom: '8em' }}>
+      <div style={{ paddingBottom: '4em' }}>
         <MyFaceMobile />
-        <Heading level={1} bold>{ title }</Heading>
+        <Heading level={2} bold>{ title }</Heading>
         <Paragraph bold fontSize={16}>{ description }</Paragraph>
         <Button bold textTransform={FONT_TRANSFORM.UPPER}>
           <Link
@@ -52,8 +52,11 @@ function CallToAction({
 }
 
 CallToAction.propTypes = {
+  // CTA Button caption
   buttonCaption: PropTypes.string.isRequired,
+  // Title of CTA
   title: PropTypes.string,
+  // Description of CTA
   description: PropTypes.string,
 };
 
@@ -98,6 +101,7 @@ export default function ResponsiveCTA({ positionCTA, ...props }) {
 }
 
 ResponsiveCTA.propTypes = {
+  // Where we want the CTA to live, RIGHT or LEFT
   positionCTA: PropTypes.string,
 };
 
