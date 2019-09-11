@@ -7,6 +7,8 @@ import ResponsivePanel from 'components/molecules/ResponsivePanel';
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Paragraph from 'components/atoms/Paragraph';
+import MyFace from 'components/atoms/images/MyFace';
+import OnlyDisplayWhen from 'components/utils/OnlyDisplayWhen';
 
 import renderLeftOrRight from 'helpers/leftOrRight';
 
@@ -30,6 +32,7 @@ function CallToAction({
       margin: 2em;
   `}>
       <div style={{ paddingBottom: '8em' }}>
+        <MyFaceMobile />
         <Heading level={1} bold>{ title }</Heading>
         <Paragraph bold fontSize={16}>{ description }</Paragraph>
         <Button bold textTransform={FONT_TRANSFORM.UPPER}>
@@ -59,6 +62,25 @@ CallToAction.defaultProps = {
   description: '',
 };
 
+function MyFaceMobile() {
+  return (
+    <OnlyDisplayWhen mobile>
+      <MyFace />
+    </OnlyDisplayWhen>
+  );
+}
+
+function MyFaceDesktop() {
+  return (
+    <div>
+      <OnlyDisplayWhen desktop>
+        <div style={{ marginBottom: '8em' }}>
+          <MyFace />
+        </div>
+      </OnlyDisplayWhen>
+    </div>
+  );
+}
 
 export default function ResponsiveCTA({ positionCTA, ...props }) {
   return (
@@ -69,7 +91,7 @@ export default function ResponsiveCTA({ positionCTA, ...props }) {
       responsiveStructure="1fr 1fr"
     >
       {
-          renderLeftOrRight(<div />, <CallToAction {...props} />, positionCTA)
+          renderLeftOrRight(<MyFaceDesktop />, <CallToAction {...props} />, positionCTA)
       }
     </ResponsivePanel>
   );

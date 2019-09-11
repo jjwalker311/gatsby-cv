@@ -12,11 +12,14 @@ export default function Paragraph(props) {
     color,
     fontSize,
     style,
+    overrideCss,
+    className,
   } = props;
 
   return (
     <p
       style={style}
+      className={className}
       css={css`
             color: ${color};
             font-weight: ${bold ? 'bold' : 'normal'};
@@ -24,6 +27,7 @@ export default function Paragraph(props) {
             @media (min-width: ${BREAKPOINTS.TABLET}px) {
               font-size: ${fontSize}px;
             }
+            ${overrideCss}
         `}
     >
       { children }
@@ -32,7 +36,7 @@ export default function Paragraph(props) {
 }
 
 Paragraph.propTypes = {
-  // Contents of Heaing
+  // Contents of Heading
   children: PropTypes.node.isRequired,
   // Whether to be bold or not
   bold: PropTypes.bool,
@@ -42,6 +46,10 @@ Paragraph.propTypes = {
   fontSize: PropTypes.number,
   // Optional CSS style override
   style: PropTypes.object,
+  // CSS to override defaults
+  overrideCss: PropTypes.string,
+  // CSS className to be passed to child
+  className: PropTypes.string,
 };
 
 Paragraph.defaultProps = {
@@ -49,4 +57,6 @@ Paragraph.defaultProps = {
   color: COLOURS.LIGHT,
   fontSize: 15,
   style: {},
+  overrideCss: '',
+  className: '',
 };

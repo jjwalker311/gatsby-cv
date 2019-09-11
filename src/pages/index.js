@@ -4,8 +4,8 @@ import Layout from 'components/molecules/Layout';
 import SEO from 'components/molecules/Seo';
 import Spotlights from 'components/molecules/Spotlights';
 import BulletedImage from 'components/molecules/BulletedImage';
-// import TitlePanel from 'components/atoms/TitlePanel';
-// import FrequentlyAskedQuestions from 'components/molecules/FrequentlyAskedQuestions';
+import TitlePanel from 'components/atoms/TitlePanel';
+import FrequentlyAskedQuestions from 'components/molecules/FrequentlyAskedQuestions';
 import ResponsiveCTA from 'components/molecules/ResponsiveCTA';
 import HomeBackground from 'components/atoms/Images/HomeBackground';
 
@@ -20,7 +20,7 @@ import Edinburgh from 'components/atoms/Images/Edinburgh';
 import NorthernIreland from 'components/atoms/Images/NorthernIreland';
 
 import bulletImages from 'constants/bulletImages.json';
-// import faqContent from 'constants/faq.json';
+import faqContent from 'constants/faq.json';
 
 const IndexPage = () => {
   // const { t } = useTranslation();
@@ -51,7 +51,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      {/* <TitlePanel title="SOME TITLE HERE SOME TITLE HERE" backgroundColour="pink" /> */}
+      <TitlePanel title="SOME TITLE HERE SOME TITLE HERE" backgroundColour="pink" description="Lorem 12312323123123 1231231231 Lorem 12312323123123" />
       <HomeBackground>
         <ResponsiveCTA buttonCaption="About Me" buttonOnClick={() => {}} title="Hey, I'm Jonathan Walker" description="Lorem 12312323123123 1231231231 Lorem 12312323123123 1231231231 Lorem 12312323123123 1231231231 Lorem 12312323123123 1231231231" />
       </HomeBackground>
@@ -62,7 +62,7 @@ const IndexPage = () => {
           <BulletedImage {...props} />
         ))}
       </div>
-      {/* <FrequentlyAskedQuestions title="some title" content={faqContent} /> */}
+      <FrequentlyAskedQuestions title="Some title" content={faqContent} />
     </Layout>
   );
 };

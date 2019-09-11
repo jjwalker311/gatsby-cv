@@ -8,12 +8,15 @@ export const COLOURS = {
   DARK: '#404040',
   BORDER: '#bfbfbf',
   BACKGROUND: {
-    DEFAULT: 'f7f7f7',
+    DEFAULT: '#f7f7f7',
+    BLUE: '#6a8fa4',
+    DARK_BLUE: '#4e768d',
   },
   TEXT: {
     DEFAULT: '#868686',
     HOVER: '#4E768E',
     SELECTED: '#185674',
+    PINK: '#854c4b',
   },
   BUTTON: {
     DEFAULT: '#d1461c',

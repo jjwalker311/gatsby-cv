@@ -4,7 +4,13 @@ import classNames from 'classnames';
 
 import { css } from '@emotion/core';
 
+import Heading from 'components/atoms/Heading';
+import Paragraph from 'components/atoms/Paragraph';
+
+
 import { FAQ_CONTENT } from 'constants/propTypes';
+import COLOURS from 'constants/colours';
+import POSITION from 'constants/positions';
 
 export default function FrequentlyAskedQuestions({ title, content }) {
   // Create State for expanded FAQ, default to none selected
@@ -25,25 +31,28 @@ export default function FrequentlyAskedQuestions({ title, content }) {
   };
 
   return (
-    <div>
-      <h2>{title}</h2>
+    <div style={{ margin: '1em' }}>
+      <Heading level={2} colour={COLOURS.DARK} textAlign={POSITION.LEFT}>{title}</Heading>
       {
         content.map(({ question, answer }, index) => {
           const openOrNot = classNames({ open: expandedFAQ === index });
           return (
             <div key={index} onClick={() => faqTrigger(index)} role="presentation">
-              <p
+              <Paragraph
                 className={openOrNot}
-                css={css`
+                fontSize={20}
+                overrideCss={css`
                 cursor:pointer;
+                margin: 0.5em 0;
                 transition: color 0.25s ease;
+                color: ${COLOURS.TEXT.DEFAULT};
                 &.open {
-                  color: pink;
+                  color: ${COLOURS.TEXT.PINK};
                 }
               `}
               >
                 {question}
-              </p>
+              </Paragraph>
               <div
                 className={openOrNot}
                 css={css`
@@ -56,7 +65,12 @@ export default function FrequentlyAskedQuestions({ title, content }) {
                  }
                `}
               >
-                <p>{answer}</p>
+                <Paragraph
+                  color={COLOURS.TEXT.DEFAULT}
+                  style={{ margin: '0.25em 0' }}
+                >
+                  {answer}
+                </Paragraph>
               </div>
             </div>
           );

@@ -7,12 +7,14 @@ import { css } from '@emotion/core';
 import BREAKPOINTS from 'constants/breakpoints';
 import COLOURS from 'constants/colours';
 import PAGES_URL from 'constants/pageUrl';
+import PAGES from 'constants/pages';
 
 import * as PROP_TYPES from 'constants/propTypes';
 
 import Hamburger from 'components/organisms/Hamburger';
 import Signature from 'components/atoms/Images/Signature';
 import MobileSignature from 'components/atoms/Images/MobileSignature';
+import OnlyDisplayWhen from 'components/utils/OnlyDisplayWhen';
 
 import { CENTRE_CENTRE } from 'helpers/cssSnippets';
 
@@ -98,24 +100,19 @@ const Header = ({ tabs, currentPage }) => {
     );
   });
 
-  const displayOnMobile = `display: flex;
-  @media (min-width: ${BREAKPOINTS.TABLET}px) {
-    display: none;
-  }`;
-
   return (
     <header>
       <StyledNav tabs={tabs} role="navigation">
 
         <div
           css={css`
-        display: grid;
-        grid-template-columns: 1fr 2fr repeat(${tabs.length}, 1fr);
-        grid-auto-rows: auto;
-        grid-gap: 1em;
-        ${CENTRE_CENTRE}
-        width: 50%;
-        `}
+            display: grid;
+            grid-template-columns: 1fr 2fr repeat(${tabs.length}, 1fr);
+            grid-auto-rows: auto;
+            grid-gap: 1em;
+            ${CENTRE_CENTRE}
+            width: 50%;
+          `}
         >
           { columns }
         </div>
@@ -128,21 +125,22 @@ const Header = ({ tabs, currentPage }) => {
           ))
         }
         </Hamburger>
-        <div
-          css={css`
+
+        <OnlyDisplayWhen
+          mobile
+          cssOverrides={css`
             position: absolute;
             top: 0;
             height: 55px;
             display: flex;
             ${CENTRE_CENTRE}
             width: 100%;
-            ${displayOnMobile}
           `}
         >
           <Link to="/">
             <MobileSignature />
           </Link>
-        </div>
+        </OnlyDisplayWhen>
       </StyledNav>
     </header>
   );
@@ -155,14 +153,10 @@ Header.propTypes = {
 
 Header.defaultProps = {
   tabs: [
-    // { caption: t('Employment'), link: '/employment', page: PAGES.EMPLOYMENT },
-    // { caption: t('Skills'), link: '/skills/', page: PAGES.SKILLS },
-    // { caption: t('Education'), link: '/education/', page: PAGES.EDUCATION },
-    // { caption: t('Personal'), link: '/personal/', page: PAGES.ABOUT_ME },
-    { caption: t('Employment'), link: '/employment', page: 'EMPLOYMENT' },
-    { caption: t('Skills'), link: '/skills/', page: 'EMPLOYMENT' },
-    { caption: t('Education'), link: '/education/', page: 'EMPLOYMENT' },
-    { caption: t('Personal'), link: '/personal/', page: 'EMPLOYMENT' },
+    { caption: t('Employment'), link: '/employment', page: PAGES.EMPLOYMENT },
+    { caption: t('Skills'), link: '/skills/', page: PAGES.SKILLS },
+    { caption: t('Education'), link: '/education/', page: PAGES.EDUCATION },
+    { caption: t('Personal'), link: '/personal/', page: PAGES.ABOUT_ME },
   ],
 };
 

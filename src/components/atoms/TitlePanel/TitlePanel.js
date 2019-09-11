@@ -5,8 +5,14 @@ import { css } from '@emotion/core';
 import COLOURS from 'constants/colours';
 import BREAKPOINTS from 'constants/breakpoints';
 
+import If from 'components/utils/If';
 
-export default function TitlePanel({ title, backgroundColour, textColour }) {
+import Heading from 'components/atoms/Heading';
+import Paragraph from 'components/atoms/Paragraph';
+
+export default function TitlePanel({
+  title, backgroundColour, textColour, description,
+}) {
   return (
     <div>
       <div
@@ -20,9 +26,15 @@ export default function TitlePanel({ title, backgroundColour, textColour }) {
             }
         `}
       >
-        <h2 css={css`color: ${textColour};`}>
+        <Heading css={css`color: ${textColour};`} level={2}>
           { title }
-        </h2>
+        </Heading>
+
+        <If condition={description}>
+          <Paragraph colour={textColour}>
+            { description }
+          </Paragraph>
+        </If>
       </div>
 
     </div>
@@ -30,12 +42,18 @@ export default function TitlePanel({ title, backgroundColour, textColour }) {
 }
 
 TitlePanel.propTypes = {
+  // Mandatory title to be displayed
   title: PropTypes.string.isRequired,
+  // Optional description
+  description: PropTypes.string,
+  // Background colour
   backgroundColour: PropTypes.string,
+  // Colour of the text (description/title)
   textColour: PropTypes.string,
 };
 
 TitlePanel.defaultProps = {
   backgroundColour: COLOURS.PRIMARY,
   textColour: COLOURS.LIGHT,
+  description: null,
 };
