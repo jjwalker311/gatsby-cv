@@ -7,7 +7,7 @@ import ResponsivePanel from 'components/molecules/ResponsivePanel';
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Paragraph from 'components/atoms/Paragraph';
-import MyFace from 'components/atoms/images/MyFace';
+import MyFace from 'components/atoms/Images/MyFace';
 import OnlyDisplayWhen from 'components/utils/OnlyDisplayWhen';
 
 import renderLeftOrRight from 'helpers/leftOrRight';
