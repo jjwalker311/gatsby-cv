@@ -29,7 +29,7 @@ export default function TitlePanel({
         { title }
       </Heading>
 
-      <If condition={description}>
+      <If condition={!!description}>
         <Paragraph colour={textColour}>
           { description }
         </Paragraph>

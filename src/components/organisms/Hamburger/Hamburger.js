@@ -1,36 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/core';
 
 import BREAKPOINTS from 'constants/breakpoints';
 import * as PROP_TYPES from 'constants/propTypes';
 
-import { HamburgerSpan, HamburgerInput, HamburgerMenu } from './styledChildren';
+import If from 'components/utils/If';
+import get from 'components/utils/get';
+
+import {
+  HamburgerSpan, HamburgerInput, HamburgerMenu, ClearBackground,
+} from './styledChildren';
+
 
 export default function Hamburger({ children }) {
-  return (
-    <div
-      css={css`
-          display: block;
-          @media (min-width: ${BREAKPOINTS.TABLET}px) {
-            display: none;
-          }
-          display: block;
-          position: relative;
-          z-index: 1;
-          -webkit-user-select: none;
-          user-select: none;
-        `}
-    >
-      {/* <!-- Checkbox is used as click receiver, so you can use the :checked selector on it.-->  eslint-disable-line max-len */}
-      <HamburgerInput type="checkbox" />
-      <HamburgerSpan />
-      <HamburgerSpan />
-      <HamburgerSpan />
+  const [checked, setChecked] = useState(false);
 
-      <HamburgerMenu>
-        {children}
-      </HamburgerMenu>
-    </div>
+  function handleMenuToggle(event) {
+    // Pulling value from event
+    const value = get(event, 'target.checked');
+
+    // Updating state
+    setChecked(value);
+  }
+
+  return (
+    <>
+      <div
+        css={css`
+            display: block;
+            @media (min-width: ${BREAKPOINTS.TABLET}px) {
+              display: none;
+            }
+            display: block;
+            position: relative;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+            z-index: 20;
+          `}
+      >
+        <HamburgerInput
+          type="checkbox"
+          name="menu-hamburger"
+          checked={checked}
+          onChange={handleMenuToggle}
+        />
+        <HamburgerSpan />
+        <HamburgerSpan />
+        <HamburgerSpan />
+
+        <HamburgerMenu>
+          {children}
+        </HamburgerMenu>
+      </div>
+      <If condition={checked}>
+        <ClearBackground onClick={() => setChecked(false)} />
+      </If>
+    </>
   );
 }
 

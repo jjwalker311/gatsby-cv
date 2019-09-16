@@ -4,7 +4,7 @@ import { css } from '@emotion/core';
 
 import Heading from 'components/atoms/Heading';
 
-import ResponsivePanel from 'components/molecules/ResponsivePanel';
+import ResponsivePanel from 'components/atoms/ResponsivePanel';
 
 import renderLeftOrRight from 'helpers/leftOrRight';
 
@@ -84,7 +84,7 @@ export default function BulletedImage({
 
 BulletedImage.propTypes = {
   // Image to display alongside BulletPoints
-  image: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
   // Image position, either LEFT or RIGHT
   imagePosition: PropTypes.oneOf([POSITION.LEFT, POSITION.RIGHT]),
   // Title of section

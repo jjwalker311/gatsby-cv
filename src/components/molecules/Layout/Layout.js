@@ -13,6 +13,8 @@ import { css } from '@emotion/core';
 import COLOURS from 'constants/colours';
 
 import Header from 'components/organisms/Header';
+import Footer from 'components/atoms/Footer';
+
 import './Layout.css';
 
 const Layout = ({ children, currentPage }) => (
@@ -39,6 +41,7 @@ const Layout = ({ children, currentPage }) => (
         >
           <main>{children}</main>
         </div>
+        <Footer />
       </div>
     )}
   />

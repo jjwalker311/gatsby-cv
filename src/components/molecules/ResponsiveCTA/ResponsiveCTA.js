@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
 
-import ResponsivePanel from 'components/molecules/ResponsivePanel';
+import ResponsivePanel from 'components/atoms/ResponsivePanel';
 import Button from 'components/atoms/Button';
 import Heading from 'components/atoms/Heading';
 import Paragraph from 'components/atoms/Paragraph';

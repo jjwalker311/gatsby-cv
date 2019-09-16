@@ -31,7 +31,7 @@ export default function FrequentlyAskedQuestions({ title, content }) {
   };
 
   return (
-    <div style={{ margin: '1em' }}>
+    <div style={{ padding: '1em 1em 2em' }}>
       <Heading level={2} colour={COLOURS.DARK} textAlign={POSITION.LEFT}>{title}</Heading>
       {
         content.map(({ question, answer }, index) => {

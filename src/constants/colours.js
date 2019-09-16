@@ -7,6 +7,7 @@ export const COLOURS = {
   BACKGROUND: {
     DEFAULT: '#f7f7f7',
     BLUE: '#6a8fa4',
+    GREY: '#e0e0e0',
     DARK_BLUE: '#4e768d',
     REALLY_DARK_BLUE: '#0d3b5a',
   },

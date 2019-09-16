@@ -35,7 +35,7 @@ export function HamburgerSpan() {
   );
 }
 
-export function HamburgerInput(props) {
+export function HamburgerInput({ ...props }) {
   return (
     <input
       css={css`
@@ -102,4 +102,29 @@ HamburgerMenu.propTypes = {
   children: PropTypes.arrayOf(
     PropTypes.any,
   ).isRequired,
+};
+
+
+export function ClearBackground({ onClick }) {
+  return (
+    <div
+      role="button"
+      onClick={onClick}
+      onKeyDown={onClick}
+      tabIndex="0"
+      css={css`
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 10;
+      `}
+    />
+  );
+}
+
+ClearBackground.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };

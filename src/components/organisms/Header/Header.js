@@ -37,7 +37,11 @@ const StyledLink = ({ isSelected, ...props }) => (
 );
 
 StyledLink.propTypes = {
-  isSelected: PropTypes.bool.isRequired,
+  isSelected: PropTypes.bool,
+};
+
+StyledLink.defaultProps = {
+  isSelected: false,
 };
 
 const StyledNav = ({ tabs, ...props }) => (
@@ -73,7 +77,7 @@ const NthColumn = ({ n, children }) => (
 );
 
 NthColumn.propTypes = {
-  children: PROP_TYPES.ANY_CHILDREN.isRequired,
+  children: PropTypes.node.isRequired,
   n: PropTypes.number.isRequired,
 };
 

@@ -1,1 +1,1 @@
-export { HamburgerSpan, HamburgerInput, HamburgerMenu } from './styledChildren';
+export * from './styledChildren';

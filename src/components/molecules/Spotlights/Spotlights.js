@@ -7,7 +7,7 @@ import COLOURS from 'constants/colours';
 import POSITION from 'constants/positions';
 import BREAKPOINTS from 'constants/breakpoints';
 
-import ResponsivePanel from 'components/molecules/ResponsivePanel';
+import ResponsivePanel from 'components/atoms/ResponsivePanel';
 import Heading from 'components/atoms/Heading';
 import Paragraph from 'components/atoms/Paragraph';
 
@@ -48,7 +48,7 @@ function Spotlight({
   );
 }
 
-Spotlight.propTypes = PROP_TYPES.SPOTLIGHT;
+Spotlight.propTypes = { ...PROP_TYPES.SPOTLIGHT };
 
 Spotlight.defaultProps = {
   link: '/',

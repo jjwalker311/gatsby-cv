@@ -13,7 +13,6 @@ import PAGES from 'constants/pages';
 import PAGES_URL from 'constants/pageUrl';
 import COLOURS from 'constants/colours';
 
-
 import EducationIcon from 'assets/education.svg';
 import WorkIcon from 'assets/work.svg';
 import SkillsIcon from 'assets/skills.svg';
@@ -63,7 +62,7 @@ const IndexPage = () => {
   bulletImages[2].textColour = COLOURS.LIGHT;
 
   return (
-    <Layout>
+    <Layout currentPage={PAGES.HOME}>
       <HomeBackground>
         <ResponsiveCTA buttonCaption="About Me" buttonOnClick={() => {}} title="Hey, I'm Jonathan Walker" description="Lorem 12312323123123 1231231231 Lorem 12312323123123 1231231231 Lorem 12312323123123 1231231231 Lorem 12312323123123 1231231231" />
       </HomeBackground>

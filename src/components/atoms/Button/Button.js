@@ -44,7 +44,7 @@ export default function Button(props) {
 
 Button.propTypes = {
   // Text displayed within button
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   // Function triggered on click
   onClick: PropTypes.func,
   // Whether to display caption in all CAPS
@@ -52,7 +52,7 @@ Button.propTypes = {
   // Text colour
   color: PropTypes.string,
   // Size of font
-  fontSize: PropTypes.oneOf([...FONT_SIZES]),
+  fontSize: PropTypes.oneOf([FONT_SIZES.SMALL, FONT_SIZES.MEDIUM, FONT_SIZES.SMALL.LARGE]),
   // Whether to be bold or not
   bold: PropTypes.bool,
   // Background colour

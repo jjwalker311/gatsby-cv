@@ -36,11 +36,16 @@ export default function ResponsivePanel(props) {
 }
 
 ResponsivePanel.propTypes = {
+  // When should the Grid format change to stacked (in pixels)
   breakpointAction: PropTypes.number,
+  // Where should the Text should align within panel
   textAlign: PropTypes.string,
+  // Where should the items within panel align
   itemAlign: PropTypes.string,
+  // Defined grid structure (based CSS Grid)
   responsiveStructure: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  // Children to render
+  children: PropTypes.node.isRequired,
 };
 
 ResponsivePanel.defaultProps = {
