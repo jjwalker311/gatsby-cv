@@ -13,6 +13,7 @@ import {
 
 
 export default function Hamburger({ children }) {
+  // Whether the Menu is expanded or not
   const [checked, setChecked] = useState(false);
 
   function handleMenuToggle(event) {
@@ -53,6 +54,7 @@ export default function Hamburger({ children }) {
           {children}
         </HamburgerMenu>
       </div>
+     
       <If condition={checked}>
         <ClearBackground onClick={() => setChecked(false)} />
       </If>
