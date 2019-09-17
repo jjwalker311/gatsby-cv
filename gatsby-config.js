@@ -42,6 +42,7 @@ module.exports = {
         components: `${__dirname}/src/components`,
         assets: `${__dirname}/src/assets`,
         helpers: `${__dirname}/src/helpers`,
+        locale: `${__dirname}/src/locale`,
       },
     },
     {

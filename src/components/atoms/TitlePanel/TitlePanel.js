@@ -11,7 +11,7 @@ import Heading from 'components/atoms/Heading';
 import Paragraph from 'components/atoms/Paragraph';
 
 export default function TitlePanel({
-  title, backgroundColour, textColour, description,
+  title, backgroundColour, textColour, children,
 }) {
   return (
     <div
@@ -29,9 +29,9 @@ export default function TitlePanel({
         { title }
       </Heading>
 
-      <If condition={!!description}>
+      <If condition={!!children}>
         <Paragraph colour={textColour}>
-          { description }
+          { children }
         </Paragraph>
       </If>
     </div>
@@ -42,15 +42,15 @@ TitlePanel.propTypes = {
   // Mandatory title to be displayed
   title: PropTypes.string.isRequired,
   // Optional description
-  description: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   // Background colour
   backgroundColour: PropTypes.string,
-  // Colour of the text (description/title)
+  // Colour of the text (children/title)
   textColour: PropTypes.string,
 };
 
 TitlePanel.defaultProps = {
   backgroundColour: COLOURS.PRIMARY,
   textColour: COLOURS.LIGHT,
-  description: null,
+  children: null,
 };

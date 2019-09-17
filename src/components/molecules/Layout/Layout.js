@@ -15,6 +15,11 @@ import COLOURS from 'constants/colours';
 import Header from 'components/organisms/Header';
 import Footer from 'components/atoms/Footer';
 
+import { LocaleProvider } from 'locale';
+
+// TODO: Allow switching of language based on something
+import ENGLISH from 'locale/lang/en.json';
+
 import './Layout.css';
 
 const Layout = ({ children, currentPage }) => (
@@ -29,20 +34,22 @@ const Layout = ({ children, currentPage }) => (
       }
     `}
     render={data => (
-      <div style={{ background: COLOURS.BACKGROUND.DEFAULT }}>
-        <Header siteTitle={data.site.siteMetadata.title} currentPage={currentPage} />
-        <div
-          css={css`
-            margin: 0 auto;
-            max-width: 1080px;
-            padding: 0;
-            background: ${COLOURS.LIGHT};
-          `}
-        >
-          <main>{children}</main>
+      <LocaleProvider value={ENGLISH}>
+        <div style={{ background: COLOURS.BACKGROUND.DEFAULT }}>
+          <Header siteTitle={data.site.siteMetadata.title} currentPage={currentPage} />
+          <div
+            css={css`
+              margin: 0 auto;
+              max-width: 1080px;
+              padding: 0;
+              background: ${COLOURS.LIGHT};
+            `}
+          >
+            <main>{children}</main>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </LocaleProvider>
     )}
   />
 );

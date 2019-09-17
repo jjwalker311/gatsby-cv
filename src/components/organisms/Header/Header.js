@@ -1,7 +1,6 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useContext } from 'react';
 import { css } from '@emotion/core';
 
 import BREAKPOINTS from 'constants/breakpoints';
@@ -16,9 +15,9 @@ import Signature from 'components/atoms/Images/Signature';
 import MobileSignature from 'components/atoms/Images/MobileSignature';
 import OnlyDisplayWhen from 'components/utils/OnlyDisplayWhen';
 
-import { CENTRE_CENTRE } from 'helpers/cssSnippets';
+import LocaleContext from 'locale';
 
-const { t } = useTranslation();
+import { CENTRE_CENTRE } from 'helpers/cssSnippets';
 
 const StyledLink = ({ isSelected, ...props }) => (
   <Link
@@ -81,7 +80,9 @@ NthColumn.propTypes = {
   n: PropTypes.number.isRequired,
 };
 
-const Header = ({ tabs, currentPage }) => {
+const Header = ({ currentPage }) => {
+  const lang = useContext(LocaleContext).tabs;
+
   // First column with Signature
   const columns = [
     <NthColumn n={0}>
@@ -89,6 +90,13 @@ const Header = ({ tabs, currentPage }) => {
         <Signature />
       </Link>
     </NthColumn>,
+  ];
+  
+  const tabs = [
+    { caption: lang.employment, link: '/employment', page: PAGES.EMPLOYMENT },
+    { caption: lang.skills, link: '/skills/', page: PAGES.SKILLS },
+    { caption: lang.education, link: '/education/', page: PAGES.EDUCATION },
+    { caption: lang.personal, link: '/personal/', page: PAGES.ABOUT_ME },
   ];
 
   // Remaining columns driven from props
@@ -106,6 +114,7 @@ const Header = ({ tabs, currentPage }) => {
 
   return (
     <header>
+      {/* { lang.tabs.employment } */}
       <StyledNav tabs={tabs} role="navigation">
 
         <div
@@ -151,17 +160,7 @@ const Header = ({ tabs, currentPage }) => {
 };
 
 Header.propTypes = {
-  tabs: PROP_TYPES.TABS,
   currentPage: PropTypes.string.isRequired,
-};
-
-Header.defaultProps = {
-  tabs: [
-    { caption: t('Employment'), link: '/employment', page: PAGES.EMPLOYMENT },
-    { caption: t('Skills'), link: '/skills/', page: PAGES.SKILLS },
-    { caption: t('Education'), link: '/education/', page: PAGES.EDUCATION },
-    { caption: t('Personal'), link: '/personal/', page: PAGES.ABOUT_ME },
-  ],
 };
 
 export default Header;

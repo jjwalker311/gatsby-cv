@@ -1,0 +1,35 @@
+{
+    "tabs": {
+        "employment": "employment",
+        "skills": "skills",
+        "education": "education",
+        "personal": "personal"
+    },
+    "homepage": {
+        "button": "About me",
+        "title": "Meet Jonathan!!",
+        "description": "I am a Front-End Developer specialising in React solutions with 6 years experience working for clients across retail, banking and telecom sectors.",
+        "spotlights": {
+            "title": "Professional Snapshots",
+            "employment": {
+                "header": "Employment",
+                "message": "From a small family run Software company, to multinational Consultancy firms and Digital Design agencies."
+            },
+            "skills": {
+                "header": "Skills",
+                "message": "Strong skillset in web based technologies and specialises in React solutions. Leadership skills in an Agile environment."
+            },
+            "education": {
+                "header": "Education",
+                "message": "Born and raised in Northern Ireland, studied Architecture in Edinburgh and continues professional development to this day."
+            }
+        },
+        "aboutSite": {
+            "title": "About this site",
+            "paragraph1": "This site has been created to showcase my current skillset. Hopefully, this is conveyed from an end-user’s perspective and through the underlying source code.",
+            "paragraph2": "This site is built with React and Gatsby, to facilitate rapid development and blazing performance.",
+            "paragraph3": "Please see links to the source code in the footer below, and feel free to drop me a message on LinkedIn if you would like to chat."
+        }
+
+    }
+}
