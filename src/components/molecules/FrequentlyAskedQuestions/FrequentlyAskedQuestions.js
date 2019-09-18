@@ -32,12 +32,12 @@ export default function FrequentlyAskedQuestions({ title, content }) {
 
   return (
     <div style={{ padding: '1em 1em 2em' }}>
-      <Heading level={2} colour={COLOURS.DARK} textAlign={POSITION.LEFT}>{title}</Heading>
+      <Heading level={2} colour={COLOURS.DARK} textAlign={POSITION.CENTER}>{title}</Heading>
       {
         content.map(({ question, answer }, index) => {
           const openOrNot = classNames({ open: expandedFAQ === index });
           return (
-            <div key={index} onClick={() => faqTrigger(index)} role="presentation">
+            <div key={`${question}-${answer}`} onClick={() => faqTrigger(index)} role="presentation">
               <Paragraph
                 className={openOrNot}
                 fontSize={20}
@@ -46,8 +46,13 @@ export default function FrequentlyAskedQuestions({ title, content }) {
                 margin: 0.5em 0;
                 transition: color 0.25s ease;
                 color: ${COLOURS.TEXT.DEFAULT};
+
                 &.open {
                   color: ${COLOURS.TEXT.PINK};
+                }
+
+                &:not(.open):hover {
+                  color: ${COLOURS.TEXT.HOVER};
                 }
               `}
               >

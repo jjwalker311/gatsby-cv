@@ -10,6 +10,7 @@ export const COLOURS = {
     GREY: '#e0e0e0',
     DARK_BLUE: '#4e768d',
     REALLY_DARK_BLUE: '#0d3b5a',
+    TURQUOISE: '#78beb4',
   },
   TEXT: {
     DEFAULT: '#868686',

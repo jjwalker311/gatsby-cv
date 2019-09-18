@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
@@ -9,10 +9,14 @@ import Hyperlink from 'components/atoms/Hyperlink';
 import BREAKPOINTS from 'constants/breakpoints';
 import COLOURS from 'constants/colours';
 
+import LocaleContext from 'locale';
+
 export default function Footer(props) {
   const {
     background,
   } = props;
+
+  const lang = useContext(LocaleContext).footer;
 
   return (
     <div css={css`
@@ -28,20 +32,24 @@ export default function Footer(props) {
       >
         <div>
           <Paragraph bold color={COLOURS.DARK} fontSize={12}>
-                        © JonathanJWalker, Inc. All Rights Reserved.
+            { lang.description }
           </Paragraph>
         </div>
+
         <div>
           <Paragraph bold color={COLOURS.DARK} fontSize={12}>
-                        CONTACT
+            { lang.contacts }
           </Paragraph>
+
           <Hyperlink href="https://www.linkedin.com/in/jonathan-j-walker/" fontSize={12}>
-                        LinkedIn
+            { lang.linkedIn }
           </Hyperlink>
+
           <Hyperlink href="https://github.com/jjwalker311/gatsby-cv/tree/master/src" fontSize={12}>
-                        Github (for this site)
+            { lang.github }
           </Hyperlink>
         </div>
+
       </ResponsivePanel>
     </div>
   );

@@ -45,7 +45,7 @@ Paragraph.propTypes = {
   // Size of the font "X"px
   fontSize: PropTypes.number,
   // Optional CSS style override
-  style: PropTypes.object,
+  style: PropTypes.shape({ root: PropTypes.string.isRequired }),
   // CSS to override defaults
   overrideCss: PropTypes.string,
   // CSS className to be passed to child

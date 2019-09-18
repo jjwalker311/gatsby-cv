@@ -91,7 +91,7 @@ const Header = ({ currentPage }) => {
       </Link>
     </NthColumn>,
   ];
-  
+
   const tabs = [
     { caption: lang.employment, link: '/employment', page: PAGES.EMPLOYMENT },
     { caption: lang.skills, link: '/skills/', page: PAGES.SKILLS },

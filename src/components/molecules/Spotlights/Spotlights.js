@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import { css } from '@emotion/core';
 
 import * as PROP_TYPES from 'constants/propTypes';
 import COLOURS from 'constants/colours';
@@ -11,12 +12,21 @@ import ResponsivePanel from 'components/atoms/ResponsivePanel';
 import Heading from 'components/atoms/Heading';
 import Paragraph from 'components/atoms/Paragraph';
 
-
 function Spotlight({
   SVG, header, message, link,
 }) {
   return (
-    <div style={{ margin: '0 1em' }}>
+    <div css={css`
+        padding: 1em;
+
+        @media (min-width: ${BREAKPOINTS.TABLET}px) {
+          &:hover {
+            transition: box-shadow 0.3s ease-in-out;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          }
+        }
+      `}
+    >
       <Link to={link}>
         <SVG
           height={80}
@@ -25,21 +35,20 @@ function Spotlight({
             margin: '0 auto',
           }}
         />
+        <strong
+          style={{
+            display: 'block',
+            margin: '1em auto 0',
+          }}
+        >
+          {header}
+        </strong>
       </Link>
-
-      <strong
-        style={{
-          display: 'block',
-          margin: '1em auto 0',
-        }}
-      >
-        {header}
-      </strong>
 
       <Paragraph
         color={COLOURS.DARK}
         style={{
-          margin: '0 auto 2em',
+          margin: '0 auto',
         }}
       >
         {message}
@@ -73,7 +82,7 @@ export default function Spotlights({ items, title }) {
       >
         {
           items.map(({ ...props }, i) => (
-            <Spotlight {...props} key={`${i}${props.message}`} />
+            <Spotlight {...props} key={`${items[i].message}`} />
           ))
         }
       </ResponsivePanel>

@@ -5,7 +5,8 @@ import BREAKPOINTS from 'constants/breakpoints';
 import * as PROP_TYPES from 'constants/propTypes';
 
 import If from 'components/utils/If';
-import get from 'components/utils/get';
+
+import get from 'helpers/get';
 
 import {
   HamburgerSpan, HamburgerInput, HamburgerMenu, ClearBackground,
@@ -54,7 +55,7 @@ export default function Hamburger({ children }) {
           {children}
         </HamburgerMenu>
       </div>
-     
+
       <If condition={checked}>
         <ClearBackground onClick={() => setChecked(false)} />
       </If>

@@ -5,15 +5,126 @@
         "education": "education",
         "personal": "personal"
     },
+    "footer": {
+        "linkedIn": "LinkedIn",
+        "github": "Github (for this site)",
+        "contacts": "Contacts",
+        "description": "© JonathanJWalker, Ltd. All Rights Reserved."
+    },
+    "education": {  
+        "header": {
+            "title": "Education",
+            "quote": "Rarely is the question asked: Is our children learning?",
+            "author": "George W. Bush"
+        },
+        "tiles": {
+            "primaryGrammar": {
+                "title": "SOME TITLE",
+                "bulletPoints": [
+                    "SOME POINT",
+                    "SOME OTHER POINT",
+                    "SOME POINT",
+                    "SOME OTHER POINT"
+                ]
+            },
+            "tertiary": {
+                "title": "SOME TITLE",
+                "bulletPoints": [
+                    "SOME POINT",
+                    "SOME OTHER POINT",
+                    "SOME POINT",
+                    "SOME OTHER POINT"
+                ]
+            },
+            "other": {
+                "title": "SOME TITLE",
+                "bulletPoints": [
+                    "SOME POINT",
+                    "SOME OTHER POINT",
+                    "SOME POINT",
+                    "SOME OTHER POINT"
+                ]
+            }
+
+        }
+    },
+    "employment": {
+        "header": {
+            "title": "Employment",
+            "quote": "My mother has always been unhappy with what I do. She would rather I do something nicer, like be a bricklayer.",
+            "author": "Mick Jagger"
+        },
+        "tiles": {
+            "vodafone": {
+                "title": "MMT Digital - Vodafone",
+                "bulletPoints": [
+                    "SOME POINT",
+                    "SOME OTHER POINT",
+                    "SOME POINT",
+                    "SOME OTHER POINT"
+                ]
+            },
+            "ibm": {
+                "title": "IBM UK",
+                "bulletPoints": [
+                    "SOME POINT",
+                    "SOME OTHER POINT",
+                    "SOME POINT",
+                    "SOME OTHER POINT"
+                ]
+            },
+            "tgm": {
+                "title": "TGM Ltd.",
+                "bulletPoints": [
+                    "SOME POINT",
+                    "SOME OTHER POINT",
+                    "SOME POINT",
+                    "SOME OTHER POINT"
+                ]
+            }
+        },
+        "faq": {
+            "title": "Work related FAQ",
+            "content": [
+                {
+                    "question": "What am I looking for in a job?",
+                    "answer": "???"
+                },
+                {
+                    "question": "Am I open to contracting roles?",
+                    "answer": "???"
+                },
+                {
+                    "question": "What job locations would be acceptable?",
+                    "answer": "???"
+                },
+                {
+                    "question": "What level of management experience do I have?",
+                    "answer": "???"
+                },
+                {
+                    "question": "Where do I see myself in 10 years?",
+                    "answer": "???"
+                }
+            ]
+        }
+    },
+    "skills": {
+        "header": {
+            "title": "Skills",
+            "quote": "You just have to find that thing that's special about you that distinguishes you from all the others, and through true talent, hard work, and passion, anything can happen.",
+            "author": "Dr. Dre"
+        }
+    },
     "homepage": {
         "button": "About me",
         "title": "Meet Jonathan!!",
-        "description": "I am a Front-End Developer specialising in React solutions with 6 years experience working for clients across retail, banking and telecom sectors.",
+        "description": "I am a Front-End Developer 👨‍💻 specialising in React solutions with 6 years experience working for clients across retail, banking and telecom sectors.",
         "spotlights": {
             "title": "Professional Snapshots",
             "employment": {
                 "header": "Employment",
-                "message": "From a small family run Software company, to multinational Consultancy firms and Digital Design agencies."
+                "message": "From a small family run Software company (🐑), to multinational Consultancy firms and Digital Design agencies."
             },
             "skills": {
                 "header": "Skills",
@@ -21,14 +132,17 @@
             },
             "education": {
                 "header": "Education",
-                "message": "Born and raised in Northern Ireland, studied Architecture in Edinburgh and continues professional development to this day."
+                "message": "Born in Northern Ireland, studied Architecture in Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿 and continues professional development to this day."
             }
         },
         "aboutSite": {
             "title": "About this site",
-            "paragraph1": "This site has been created to showcase my current skillset. Hopefully, this is conveyed from an end-user’s perspective and through the underlying source code.",
-            "paragraph2": "This site is built with React and Gatsby, to facilitate rapid development and blazing performance.",
-            "paragraph3": "Please see links to the source code in the footer below, and feel free to drop me a message on LinkedIn if you would like to chat."
+            "paragraph": [
+                "The site has been created to showcase my current skill set. Hopefully, this is conveyed from an end-user’s perspective and through the underlying source code 🔬.",
+                "This site is built with React ⚛️ and Gatsby 🍾. Gatsby is a React-based static site generator, leveraging pre-configuration to build a website that uses only static files. This alongside code splitting, intelligent image loading and asset optimisation lead to incredibly fast page loading times.",
+                "I have structured a React component 'Atomic Hierarchy' to aid abstraction and reuse throughout the application. In the future this Component Library may be published in a open-source NPM repository to be a dependency in further projects.",
+                "Please see links to the source code in the footer below, and feel free to drop me a message on LinkedIn if you would like to chat."
+            ]    
         }
 
     }
