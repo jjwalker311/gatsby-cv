@@ -44,7 +44,7 @@ export default function Education() {
       title: lang.tiles.other.title,
       bulletPoints: lang.tiles.other.bulletPoints,
       imagePosition: POSITION.RIGHT,
-      backgroundColour: COLOURS.BACKGROUND.REALLY_DARK_BLUE,
+      backgroundColour: COLOURS.BACKGROUND.TURQUOISE,
       textColour: COLOURS.LIGHT,
       image: <OtherEducation />,
     },
