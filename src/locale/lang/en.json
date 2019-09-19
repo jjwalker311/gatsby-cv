@@ -57,6 +57,17 @@
         "tiles": {
             "vodafone": {
                 "title": "MMT Digital - Vodafone",
+                "subtitle": "From AAAA to BBBB",
+                "bulletPoints": [
+                    "SOME POINT",
+                    "SOME OTHER POINT",
+                    "SOME POINT",
+                    "SOME OTHER POINT"
+                ]
+            },
+            "cognitoIq": {
+                "title": "Cognito IQ",
+                "subtitle": "From AAAA to BBBB",
                 "bulletPoints": [
                     "SOME POINT",
                     "SOME OTHER POINT",
@@ -66,6 +77,7 @@
             },
             "ibm": {
                 "title": "IBM UK",
+                "subtitle": "From AAAA to BBBB",
                 "bulletPoints": [
                     "SOME POINT",
                     "SOME OTHER POINT",
@@ -75,6 +87,7 @@
             },
             "tgm": {
                 "title": "TGM Ltd.",
+                "subtitle": "From AAAA to BBBB",
                 "bulletPoints": [
                     "SOME POINT",
                     "SOME OTHER POINT",
@@ -114,6 +127,55 @@
             "title": "Skills",
             "quote": "You just have to find that thing that's special about you that distinguishes you from all the others, and through true talent, hard work, and passion, anything can happen.",
             "author": "Dr. Dre"
+        },
+        "spotlights": {
+            "title": "Snapshots",
+            "coding": {
+                "header": "Coding",
+                "message": "LOREM LOREM LOREMLOREM LOREM LOREM"
+            },
+            "leadership": {
+                "header": "Leadership",
+                "message": "LOREM LOREM LOREMLOREM LOREM LOREM"
+            },
+            "testing": {
+                "header": "Quality assurance",
+                "message": "LOREM LOREM LOREMLOREM LOREM LOREM"
+            }
+        },
+        "content": {
+            "coding": {
+                "title": "Software development",
+                "paragraphs": [
+                    "AAA",
+                    "BBB",
+                    "CCC"
+                ]
+            },
+            "testing": {
+                "title": "Quality assurance",
+                "paragraphs": [
+                    "AAA",
+                    "BBB",
+                    "CCC"
+                ]
+            },
+            "leadership": {
+                "title": "Leadership",
+                "paragraphs": [
+                    "AAA",
+                    "BBB",
+                    "CCC"
+                ]
+            },
+            "random": {
+                "title": "Random skills",
+                "paragraphs": [
+                    "AAA",
+                    "BBB",
+                    "CCC"
+                ]
+            }
         }
     },
     "homepage": {

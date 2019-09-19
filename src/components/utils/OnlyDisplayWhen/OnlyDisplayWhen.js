@@ -33,7 +33,7 @@ OnlyDisplayWhen.propTypes = {
   // Children to be conditionally rendered
   children: PropTypes.node.isRequired,
   // CSS Style overrides
-  cssOverrides: PropTypes.shape({ root: PropTypes.string.isRequired }),
+  cssOverrides: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   // Whether to display on Mobile
   mobile: PropTypes.bool,
   // Whether to display on Desktop

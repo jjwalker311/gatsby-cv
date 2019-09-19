@@ -47,7 +47,7 @@ export function HamburgerInput({ ...props }) {
           left: 15px;
           cursor: pointer;
           opacity: 0; /* hide this */
-          z-index: 2; /* and place it over the hamburger */
+          z-index: 40; /* and place it over the hamburger */
           -webkit-touch-callout: none;
     
           &:checked ~ span{

@@ -1,10 +1,10 @@
 const PAGES = {
-  HOME: 'HOME',
-  EMPLOYMENT: 'EMPLOYMENT',
-  SKILLS: 'SKILLS',
-  EDUCATION: 'EDUCATION',
-  ABOUT_ME: 'ABOUT_ME',
-  NOT_FOUND: 'NOT_FOUND',
+  HOME: 'Home',
+  EMPLOYMENT: 'Employment',
+  SKILLS: 'Skills',
+  EDUCATION: 'Education',
+  ABOUT_ME: 'About me',
+  NOT_FOUND: 'Not found',
 };
 
 export default PAGES;

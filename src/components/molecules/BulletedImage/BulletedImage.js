@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
 import Heading from 'components/atoms/Heading';
-
+import Paragraph from 'components/atoms/Paragraph';
 import ResponsivePanel from 'components/atoms/ResponsivePanel';
 
 import renderLeftOrRight from 'helpers/leftOrRight';
@@ -39,11 +39,18 @@ ImageWrapper.propTypes = {
  * Maps Array of bullet points
  */
 function BulletList({
-  title, bulletPoints, textColour,
+  title, bulletPoints, textColour, subtitle,
 }) {
   return (
     <div style={{ padding: '1em' }}>
-      <Heading level={2} colour={textColour}>{title}</Heading>
+      <Heading level={2} colour={textColour} style={{ marginBottom: 0 }}>
+        {title}
+      </Heading>
+
+      <Paragraph style={{ textAlign: 'center', margin: 0 }} fontSize={12}>
+        <i>{ subtitle }</i>
+      </Paragraph>
+
       <ul>
         {
             bulletPoints.map(point => <li style={{ color: textColour }}>{point}</li>)
@@ -56,11 +63,18 @@ function BulletList({
 BulletList.propTypes = {
   // Title of section
   title: PropTypes.string.isRequired,
+  // Optional subtitle
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   // Array of bullet points
   bulletPoints: PropTypes.arrayOf(PropTypes.string).isRequired,
   // Colour of text
   textColour: PropTypes.string.isRequired,
 };
+
+BulletList.defaultProps = {
+  subtitle: null,
+};
+
 
 export default function BulletedImage({
   image, imagePosition, backgroundColour, ...props
@@ -84,7 +98,7 @@ export default function BulletedImage({
 
 BulletedImage.propTypes = {
   // Image to display alongside BulletPoints
-  image: PropTypes.shape({ root: PropTypes.string.isRequired }).isRequired,
+  image: PropTypes.node.isRequired, 
   // Image position, either LEFT or RIGHT
   imagePosition: PropTypes.oneOf([POSITION.LEFT, POSITION.RIGHT]),
   // Title of section

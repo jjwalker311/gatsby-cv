@@ -47,9 +47,12 @@ export default function Hamburger({ children }) {
           checked={checked}
           onChange={handleMenuToggle}
         />
-        <HamburgerSpan />
-        <HamburgerSpan />
-        <HamburgerSpan />
+
+        <div>
+          <HamburgerSpan />
+          <HamburgerSpan />
+          <HamburgerSpan />
+        </div>
 
         <HamburgerMenu>
           {children}

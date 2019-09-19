@@ -13,7 +13,7 @@ import COLOURS from 'constants/colours';
 import POSITION from 'constants/positions';
 
 import Vodafone from 'components/atoms/Images/Vodafone';
-// import CognitoIQ from 'components/atoms/Images/CognitoIQ';
+import CognitoIQ from 'components/atoms/Images/CognitoIQ';
 import Ibm from 'components/atoms/Images/Ibm';
 import Tgm from 'components/atoms/Images/Tgm';
 
@@ -27,18 +27,27 @@ export default function Employment() {
     {
       // Vodafone/MMT Digital
       title: lang.tiles.vodafone.title,
+      subtitle: lang.tiles.vodafone.subtitle,
       bulletPoints: lang.tiles.vodafone.bulletPoints,
       imagePosition: POSITION.LEFT,
       backgroundColour: COLOURS.BACKGROUND.REALLY_DARK_BLUE,
       textColour: COLOURS.LIGHT,
       image: <Vodafone />,
     },
-    // {
-    //   // Cognito IQ
-    // },
+    {
+      // Cognito IQ
+      title: lang.tiles.cognitoIq.title,
+      subtitle: lang.tiles.cognitoIq.subtitle,
+      bulletPoints: lang.tiles.cognitoIq.bulletPoints,
+      imagePosition: POSITION.RIGHT,
+      backgroundColour: COLOURS.BACKGROUND.DARK_BLUE,
+      textColour: COLOURS.LIGHT,
+      image: <CognitoIQ />,
+    },
     {
       // IBM
       title: lang.tiles.ibm.title,
+      subtitle: lang.tiles.ibm.subtitle,
       bulletPoints: lang.tiles.ibm.bulletPoints,
       imagePosition: POSITION.LEFT,
       backgroundColour: COLOURS.BACKGROUND.BLUE,
@@ -48,6 +57,7 @@ export default function Employment() {
     {
       // TGM
       title: lang.tiles.tgm.title,
+      subtitle: lang.tiles.tgm.subtitle,
       bulletPoints: lang.tiles.tgm.bulletPoints,
       imagePosition: POSITION.RIGHT,
       backgroundColour: COLOURS.BACKGROUND.TURQUOISE,

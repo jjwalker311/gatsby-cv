@@ -12,11 +12,13 @@ export default function Heading(props) {
     colour,
     bold,
     textAlign,
+    style,
   } = props;
 
   const Tag = `h${level}`;
   return (
     <Tag
+      style={style}
       css={css`
         color: ${colour};
         font-weight: ${bold ? 'bold' : 'normal'};
@@ -39,6 +41,8 @@ Heading.propTypes = {
   colour: PropTypes.string,
   // Where to align text
   textAlign: PropTypes.string,
+  // Style overrides
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 Heading.defaultProps = {
@@ -46,4 +50,5 @@ Heading.defaultProps = {
   colour: COLOURS.LIGHT,
   level: 2,
   textAlign: POSITION.CENTER,
+  style: {},
 };

@@ -10,5 +10,5 @@ export default function BulletImages({ tiles }) {
 }
 
 BulletImages.propTypes = {
-  tiles: PropTypes.arrayOf(PropTypes.shape({ root: PropTypes.string.isRequired })).isRequired,
+  tiles: PropTypes.arrayOf(PropTypes.object).isRequired, // eslint-disable-line react/forbid-prop-types
 };

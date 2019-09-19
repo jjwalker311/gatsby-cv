@@ -150,7 +150,7 @@ const Header = ({ currentPage }) => {
             width: 100%;
           `}
         >
-          <Link to="/">
+          <Link to="/" style={{ width: '135px', zIndex: '30' }}>
             <MobileSignature />
           </Link>
         </OnlyDisplayWhen>

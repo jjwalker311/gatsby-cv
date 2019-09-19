@@ -12,38 +12,63 @@ import ResponsivePanel from 'components/atoms/ResponsivePanel';
 import Heading from 'components/atoms/Heading';
 import Paragraph from 'components/atoms/Paragraph';
 
+import If from 'components/utils/If';
+
+function ImageAndTitle({ SVG, title }) {
+  return (
+    <>
+      <SVG
+        height={80}
+        width={80}
+        style={{
+          display: 'block',
+          margin: '0 auto',
+        }}
+      />
+      <strong
+        style={{
+          display: 'block',
+          margin: '1em auto 0',
+        }}
+      >
+        { title }
+      </strong>
+    </>
+  );
+}
+
+ImageAndTitle.propTypes = {
+  SVG: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+
 function Spotlight({
   SVG, header, message, link,
 }) {
+  const showAsLink = !!link;
+
   return (
     <div css={css`
         padding: 1em;
 
         @media (min-width: ${BREAKPOINTS.TABLET}px) {
-          &:hover {
+          ${showAsLink ? `&:hover {
             transition: box-shadow 0.3s ease-in-out;
             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-          }
+          ` : ''}}
         }
       `}
     >
-      <Link to={link}>
-        <SVG
-          height={80}
-          style={{
-            display: 'block',
-            margin: '0 auto',
-          }}
-        />
-        <strong
-          style={{
-            display: 'block',
-            margin: '1em auto 0',
-          }}
-        >
-          {header}
-        </strong>
-      </Link>
+      <If condition={showAsLink}>
+        <Link to={link}>
+          <ImageAndTitle SVG={SVG} title={header} />
+        </Link>
+      </If>
+
+      <If condition={!showAsLink}>
+        <ImageAndTitle SVG={SVG} title={header} />
+      </If>
 
       <Paragraph
         color={COLOURS.DARK}

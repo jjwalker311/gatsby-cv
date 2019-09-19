@@ -8,8 +8,6 @@ import Seo from 'components/molecules/Seo';
 import Spotlights from 'components/molecules/Spotlights';
 import ResponsiveCTA from 'components/molecules/ResponsiveCTA';
 
-import If from 'components/utils/If';
-
 import PAGES from 'constants/pages';
 import PAGES_URL from 'constants/pageUrl';
 import COLOURS from 'constants/colours';
@@ -64,19 +62,13 @@ const IndexPage = () => {
 
       <TitlePanel title={lang.aboutSite.title} backgroundColour={COLOURS.BACKGROUND.DARK_BLUE}>
         {
-          lang.aboutSite.paragraph.map((paragraph, index) => (
-            <>
-              <If condition={index !== 0}>
-                <br />
-                <br />
-              </If>
+          lang.aboutSite.paragraph.map(paragraph => (
+            <div style={{ margin: '1em 0' }}>
               { paragraph }
-            </>
+            </div>
           ))
         }
       </TitlePanel>
-
-      {/* <FrequentlyAskedQuestions title="Some title" content={faqContent} /> */}
     </Layout>
   );
 };
