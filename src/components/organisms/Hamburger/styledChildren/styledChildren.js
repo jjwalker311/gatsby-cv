@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import COLOURS from 'constants/colours';
 
-export function HamburgerSpan() {
+export function HamburgerSpan({ checked }) {
   return (
     <span
       css={css`
@@ -19,6 +19,7 @@ export function HamburgerSpan() {
             transform-origin: 4px 0px;
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
             background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            left 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
             opacity 0.55s ease;  
             left: 20px;
             top: 3px;
@@ -30,10 +31,36 @@ export function HamburgerSpan() {
             &:nth-last-child(2){
                 transform-origin: 0% 100%;
             }
+
+            ${checked && `
+              opacity: 1;
+              transform: rotate(45deg);
+              background: ${COLOURS.SECONDARY};
+        
+              &:nth-last-child(2){
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+              }
+        
+              &:nth-last-child(1){
+                transform: rotate(-45deg);
+                position: relative;
+                left: 15px;
+              }
+            `}
+
             `}
     />
   );
 }
+
+HamburgerSpan.propTypes = {
+  checked: PropTypes.bool,
+};
+
+HamburgerSpan.defaultProps = {
+  checked: false,
+};
 
 export function HamburgerInput({ ...props }) {
   return (

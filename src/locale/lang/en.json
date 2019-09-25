@@ -28,12 +28,11 @@
                 ]
             },
             "tertiary": {
-                "title": "SOME TITLE",
+                "title": "University of Edinburgh",
                 "bulletPoints": [
-                    "SOME POINT",
-                    "SOME OTHER POINT",
-                    "SOME POINT",
-                    "SOME OTHER POINT"
+                    "I graduated with First Class Honours while sitting for Masters of Engineering. Upon graduation I placed third in my year.",
+                    "A multi-faceted course combining various aspects of Civil, Chemical, Fire Safety and Structural Engineering with Architectural History and Theory.",
+                    "My thesis on “Hybrid Reinforced Concrete under Fire Conditions” was published in a Professional Engineer Journal."
                 ]
             },
             "other": {
@@ -207,5 +206,32 @@
             ]    
         }
 
+    },
+    "personal": {
+        "header": {
+            "title": "About me",
+            "quote": "You're only given a little spark of madness. You mustn't lose it.",
+            "author": "Robin Williams"
+        },
+        "tiles": {
+            "golf": {
+                "title": "Golf",
+                "bulletPoints": [
+                    "SOME POINT",
+                    "SOME OTHER POINT",
+                    "SOME POINT",
+                    "SOME OTHER POINT"
+                ]
+            },
+            "borneo": {
+                "title": "Raleigh International - Borneo",
+                "bulletPoints": [
+                    "SOME POINT",
+                    "SOME OTHER POINT",
+                    "SOME POINT",
+                    "SOME OTHER POINT"
+                ]
+            }
+        }
     }
 }

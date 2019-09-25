@@ -49,9 +49,9 @@ export default function Hamburger({ children }) {
         />
 
         <div>
-          <HamburgerSpan />
-          <HamburgerSpan />
-          <HamburgerSpan />
+          <HamburgerSpan checked={checked} />
+          <HamburgerSpan checked={checked} />
+          <HamburgerSpan checked={checked} />
         </div>
 
         <HamburgerMenu>

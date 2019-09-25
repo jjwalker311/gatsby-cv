@@ -5,6 +5,8 @@ import TitlePanel from 'components/atoms/TitlePanel';
 
 import Layout from 'components/molecules/Layout';
 import Spotlights from 'components/molecules/Spotlights';
+import Seo from 'components/molecules/Seo';
+
 
 import PAGES from 'constants/pages';
 import COLOURS from 'constants/colours';
@@ -57,6 +59,8 @@ export default function Skills() {
 
   return (
     <Layout currentPage={PAGES.SKILLS}>
+      <Seo title={PAGES.SKILLS} keywords={['gatsby', 'application', 'react']} />
+
       <TitlePanel
         title={lang.header.title}
         backgroundColour={COLOURS.BACKGROUND.TURQUOISE}

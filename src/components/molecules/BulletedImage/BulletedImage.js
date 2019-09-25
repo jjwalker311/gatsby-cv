@@ -98,7 +98,7 @@ export default function BulletedImage({
 
 BulletedImage.propTypes = {
   // Image to display alongside BulletPoints
-  image: PropTypes.node.isRequired, 
+  image: PropTypes.node.isRequired,
   // Image position, either LEFT or RIGHT
   imagePosition: PropTypes.oneOf([POSITION.LEFT, POSITION.RIGHT]),
   // Title of section
