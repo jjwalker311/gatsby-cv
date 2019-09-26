@@ -7,6 +7,13 @@ import onScroll from 'helpers/onScroll';
 
 import If from 'components/utils/If';
 
+/**
+ * Gets Scroll top - Tested on Chrome, Safari and Firefox
+ */
+function getScrollTop() {
+  return Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
+}
+
 // Sticky wrapper, will render childen after user has stopped scroll to defined point
 export default function Sticky({ children, delay, whenToShow }) {
   // Boolean value to hide/show children
@@ -17,7 +24,7 @@ export default function Sticky({ children, delay, whenToShow }) {
 
   // On STOP of scroll, setInView depending on where we're scrolled to
   const stop = (minPx) => {
-    if (minPx > document.documentElement.scrollTop) {
+    if (minPx > getScrollTop()) {
       // Sets to FALSE, if we're within top half of page
       setInView(false);
     } else {
@@ -42,20 +49,17 @@ export default function Sticky({ children, delay, whenToShow }) {
     };
   }, []);
 
-  // console.log(inView ? 'SHOW' : 'HIDE')
-
   return (
-    <div css={css`
+    <div
+      css={css`
       position: fixed;
       width: 100%;
       z-index: 40;
 
-      -webkit-transform: translateY(-100%);
       transform: translateY(-100%);
       transition: transform 300ms ease-in-out;
 
       ${inView && `
-        -webkit-transform: translateY(0);
         transform: translateY(0);
         transition: transform 300ms ease-in-out;
       `}
@@ -78,6 +82,8 @@ Sticky.propTypes = {
 };
 
 Sticky.defaultProps = {
+  // Delay 1 second before displaying children
   delay: 1000,
-  whenToShow: 1 / 3,
+  // Show when scrolled one third of page
+  whenToShow: 1 / 2,
 };
