@@ -5,17 +5,18 @@ import Img from 'gatsby-image';
 const Image = () => (
   <StaticQuery
     query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "signature.png" }) {
-          childImageSharp {
-            fixed(width: 180, height: 60)  {
-              ...GatsbyImageSharpFixed_noBase64
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Img fixed={data.placeholderImage.childImageSharp.fixed} />}
+              query {
+                file(relativePath: { eq: "signature.png" }) {
+                  childImageSharp {
+                    fixed(width: 180, height: 60) {
+                      ...GatsbyImageSharpFixed_noBase64
+                    }
+                  }
+                }
+              }
+            `}
+    render={data => <Img fixed={data.file.childImageSharp.fixed} fadeIn={false} critical />}
+
   />
 );
 

@@ -11,7 +11,7 @@ import If from 'components/utils/If';
  * Gets Scroll top - Tested on Chrome, Safari and Firefox
  */
 function getScrollTop() {
-  return Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
+  return Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
 }
 
 // Sticky wrapper, will render childen after user has stopped scroll to defined point
@@ -65,9 +65,7 @@ export default function Sticky({ children, delay, whenToShow }) {
       `}
     `}
     >
-      <If condition={inView}>
-        { children }
-      </If>
+      { children }
     </div>
   );
 }
