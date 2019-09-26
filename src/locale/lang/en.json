@@ -179,31 +179,41 @@
     },
     "homepage": {
         "button": "About me",
-        "title": "Meet Jonathan!!",
-        "description": "I am a Front-End Developer 👨‍💻 specialising in React solutions with 6 years experience working for clients across retail, banking and telecom sectors.",
+        "title": "Meet Jonathan 👨🏻‍💻",
+        "description": "I am a Front-End Developer specialising in React solutions with 6 years experience working for clients across retail, banking and telecom sectors.",
         "spotlights": {
             "title": "Professional Snapshots",
             "employment": {
                 "header": "Employment",
-                "message": "From a small family run Software company (🐑), to multinational Consultancy firms and Digital Design agencies."
+                "message": "Starting from a family run Software company (🐑), to multinational Consultancy firms and Digital Design agencies."
             },
             "skills": {
                 "header": "Skills",
-                "message": "Strong skillset in web based technologies and specialises in React solutions. Leadership skills in an Agile environment."
+                "message": "I have a strong skill-set in web-based technologies and specialise in React solutions."
             },
             "education": {
                 "header": "Education",
-                "message": "Born in Northern Ireland, studied Architecture in Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿 and continues professional development to this day."
+                "message": "I was born in Northern Ireland, studied Architecture in Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿 ."
             }
         },
         "aboutSite": {
             "title": "About this site",
             "paragraph": [
-                "The site has been created to showcase my current skill set. Hopefully, this is conveyed from an end-user’s perspective and through the underlying source code 🔬.",
-                "This site is built with React ⚛️ and Gatsby 🍾. Gatsby is a React-based static site generator, leveraging pre-configuration to build a website that uses only static files. This alongside code splitting, intelligent image loading and asset optimisation lead to incredibly fast page loading times.",
-                "I have structured a React component 'Atomic Hierarchy' to aid abstraction and reuse throughout the application. In the future this Component Library may be published in a open-source NPM repository to be a dependency in further projects.",
-                "Please see links to the source code in the footer below, and feel free to drop me a message on LinkedIn if you would like to chat."
+                "The site has been created to showcase my technical skill set. I hope this has been conveyed from an end-user’s perspective and through analyse of the underlying source code 🔬.",
+                "I aimed to build a responsive site, with special attention placed on load times and accessibility. Please see links to the source code in the footer.",
+                "If you like what you see, feel free to drop me a message on LinkedIn!"
             ]    
+        },
+        "techStack": {
+            "title": "Tech stack",
+            "paragraph": [
+                "This site is built with React ⚛️ and Gatsby 🍾, using styled components from Emotion 👩‍🎤.",  
+                "React is a Javascript library maintained by Facebook that is used for constructing user interfaces.", 
+                "Gatsby is a React-based static site generator. This, alongside code splitting, intelligent image loading and asset optimisation leads to incredibly fast page loading times.",
+                "Emotion is a library designed for writing CSS in JavaScript. This removes the need for a global style-sheet and allows for co-location of style nearer to where it used.",
+                "I have created a 'Atomic Hierarchy' to aid abstraction and reuse throughout the application. In the future this Component Library may be published in a open-source NPM repository.",
+                "All code (apart from React/Gatsby/Emotion dependencies) is my own and has been written from scratch."
+            ]
         }
 
     },

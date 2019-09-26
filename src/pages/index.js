@@ -61,6 +61,10 @@ const IndexPage = () => {
       <TitlePanel title={lang.aboutSite.title} backgroundColour={COLOURS.BACKGROUND.DARK_BLUE}>
         { lang.aboutSite.paragraph }
       </TitlePanel>
+
+      <TitlePanel title={lang.techStack.title} backgroundColour={COLOURS.BACKGROUND.REALLY_DARK_BLUE}>
+        { lang.techStack.paragraph }
+      </TitlePanel>
     </Layout>
   );
 };

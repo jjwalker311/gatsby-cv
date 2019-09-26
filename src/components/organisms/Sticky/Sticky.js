@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
-import onScroll from 'helpers/onScroll';
-
-import If from 'components/utils/If';
+import OnScroll from 'helpers/onScroll';
 
 /**
  * Gets Scroll top - Tested on Chrome, Safari and Firefox
@@ -19,24 +17,43 @@ export default function Sticky({ children, delay, whenToShow }) {
   // Boolean value to hide/show children
   const [inView, setInView] = useState(false);
 
+  const stickyRef = useRef(null);
+
+  /**
+   * Catch all to ensure we're still mounted...
+   * We have timeouts running in onScroll that may still fire
+   * @param  {boolean} value
+   */
+  function safeSetState(value) {
+    // Verifying we are still mounted before attempting to setState
+    if (stickyRef.current != null) {
+      setInView(value);
+    }
+  }
+
   // On START of scroll, should view out of view
-  const start = () => setInView(false);
+  const start = () => {
+    safeSetState(false);
+  };
 
   // On STOP of scroll, setInView depending on where we're scrolled to
   const stop = (minPx) => {
     if (minPx > getScrollTop()) {
       // Sets to FALSE, if we're within top half of page
-      setInView(false);
+      safeSetState(false);
     } else {
       // Sets to TRUE, if we're below top half of page
-      setInView(true);
+      safeSetState(true);
     }
   };
 
   // Add scroll listener ONCE on initial render
   useEffect(() => {
+    // Using new to initialise timeout handler required in "handler"
+    const onScroll = new OnScroll();
+
     // Pass start/stop callbacks to onScroll handler, along with a delay to trigger the "stop" callback
-    const scrollCallBack = window.addEventListener('scroll', () => onScroll(
+    const scrollCallBack = window.addEventListener('scroll', () => onScroll.handler(
       start,
       // Only has access to window when mounted
       () => stop(window.innerHeight * whenToShow),
@@ -51,6 +68,7 @@ export default function Sticky({ children, delay, whenToShow }) {
 
   return (
     <div
+      ref={stickyRef}
       css={css`
       position: fixed;
       width: 100%;

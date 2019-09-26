@@ -29,6 +29,22 @@ function SEO({
 
   const metaDescription = description || site.siteMetadata.description;
 
+  const commonKeyWords = [
+    ...keywords,
+    'Jonathan Walker',
+    'Jonathan James Walker',
+    'Jonathan',
+    'James',
+    'Walker',
+    'React',
+    'Gatsby',
+    'CV',
+    'Curriculum vitae',
+    'Software developer',
+    'Software engineer',
+    'Javascript',
+  ];
+
   return (
     <Helmet
       htmlAttributes={{
@@ -71,10 +87,10 @@ function SEO({
         },
       ]
         .concat(
-          keywords.length > 0
+          commonKeyWords.length > 0
             ? {
               name: 'keywords',
-              content: keywords.join(', '),
+              content: commonKeyWords.join(', '),
             }
             : [],
         )
