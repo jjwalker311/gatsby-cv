@@ -9,7 +9,9 @@
         "SharedArrayBuffer": "readonly",
         "describe": "readonly",
         "expect": "readonly",
-        "it": "readonly"
+        "it": "readonly",
+        "screen": "readonly",
+        "document": "readonly"
     },
     "parser": "babel-eslint",
     "parserOptions": {

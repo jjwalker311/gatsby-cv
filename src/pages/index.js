@@ -59,13 +59,7 @@ const IndexPage = () => {
       <Spotlights items={items} title={lang.spotlights.title} />
 
       <TitlePanel title={lang.aboutSite.title} backgroundColour={COLOURS.BACKGROUND.DARK_BLUE}>
-        {
-          lang.aboutSite.paragraph.map(paragraph => (
-            <div style={{ margin: '1em 0' }}>
-              { paragraph }
-            </div>
-          ))
-        }
+        { lang.aboutSite.paragraph }
       </TitlePanel>
     </Layout>
   );

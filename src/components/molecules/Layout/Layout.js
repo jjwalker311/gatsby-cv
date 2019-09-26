@@ -12,8 +12,10 @@ import { css } from '@emotion/core';
 
 import COLOURS from 'constants/colours';
 
-import Header from 'components/organisms/Header';
 import Footer from 'components/atoms/Footer';
+
+import Header from 'components/organisms/Header';
+import Sticky from 'components/organisms/Sticky';
 
 import { LocaleProvider } from 'locale';
 
@@ -35,6 +37,9 @@ const Layout = ({ children, currentPage }) => (
     `}
     render={data => (
       <LocaleProvider value={ENGLISH}>
+        <Sticky>
+          <Header siteTitle={data.site.siteMetadata.title} currentPage={currentPage} />
+        </Sticky>
         <div style={{ background: COLOURS.BACKGROUND.DEFAULT }}>
           <Header siteTitle={data.site.siteMetadata.title} currentPage={currentPage} />
           <div

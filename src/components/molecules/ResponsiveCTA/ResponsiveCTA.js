@@ -76,7 +76,7 @@ function MyFaceMobile() {
 function MyFaceDesktop() {
   return (
     <div>
-      <OnlyDisplayWhen desktop>
+      <OnlyDisplayWhen desktop key="MyFaceDesktop">
         <div style={{ marginBottom: '8em' }}>
           <MyFace />
         </div>

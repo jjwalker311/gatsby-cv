@@ -30,10 +30,14 @@ export default function TitlePanel({
         { title }
       </Heading>
 
-      <If condition={!!children}>
-        <Paragraph color={textColour} style={{ textAlign }}>
-          { children }
-        </Paragraph>
+      <If condition={children}>
+        {
+          React.Children.map(children, child => (
+            <Paragraph color={textColour} style={{ textAlign }} key={child}>
+              { child }
+            </Paragraph>
+          ))
+        }
       </If>
     </div>
   );
