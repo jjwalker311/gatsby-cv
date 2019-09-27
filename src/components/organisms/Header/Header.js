@@ -120,22 +120,28 @@ const Header = ({ currentPage }) => {
         <div
           css={css`
             display: grid;
-            grid-template-columns: 1fr 2fr repeat(${tabs.length}, 1fr);
+            grid-template-columns: 1fr 3fr repeat(${tabs.length}, 1fr);
             grid-auto-rows: auto;
             grid-gap: 1em;
             ${CENTRE_CENTRE}
-            width: 50%;
+            width: 55%;
           `}
         >
           { columns }
         </div>
         <Hamburger>
-          {
-          tabs.map(({ caption, link }) => (
-            <StyledLink to={link}>
-              <li css={css`border-bottom: 1px solid ${COLOURS.BORDER};`}>{caption}</li>
-            </StyledLink>
-          ))
+          {displayed => (
+            tabs.map(({ caption, link }, index) => (
+              <StyledLink to={link}>
+                <li
+                  tabIndex={displayed ? (index + 1) : -1}
+                  css={css`border-bottom: 1px solid ${COLOURS.BORDER};`}
+                >
+                  {caption}
+                </li>
+              </StyledLink>
+            ))
+          )
         }
         </Hamburger>
 
@@ -150,7 +156,7 @@ const Header = ({ currentPage }) => {
             width: 100%;
           `}
         >
-          <Link to="/" style={{ width: '135px', zIndex: '30' }}>
+          <Link to="/" style={{ width: '135px', zIndex: '30' }} tabIndex={0}>
             <MobileSignature />
           </Link>
         </OnlyDisplayWhen>

@@ -19,7 +19,8 @@
         },
         "tiles": {
             "primaryGrammar": {
-                "title": "SOME TITLE",
+                "title": "Primary/Secondary",
+                "subtitle": "1992-2006",
                 "bulletPoints": [
                     "SOME POINT",
                     "SOME OTHER POINT",
@@ -29,14 +30,17 @@
             },
             "tertiary": {
                 "title": "University of Edinburgh",
+                "subtitle": "2006-2011",
                 "bulletPoints": [
                     "I graduated with First Class Honours while sitting for Masters of Engineering. Upon graduation I placed third in my year.",
                     "A multi-faceted course combining various aspects of Civil, Chemical, Fire Safety and Structural Engineering with Architectural History and Theory.",
+                    "I decided to specilise in Structural and Fire safety engineering. The balance of mathematical challenge and creative problem solving most closely matched to my skillset over pure Architecture.",
                     "My thesis on “Hybrid Reinforced Concrete under Fire Conditions” was published in a Professional Engineer Journal."
                 ]
             },
             "other": {
-                "title": "SOME TITLE",
+                "title": "Further learning",
+                "subtitle": "2011-to-date",
                 "bulletPoints": [
                     "SOME POINT",
                     "SOME OTHER POINT",
@@ -44,7 +48,6 @@
                     "SOME OTHER POINT"
                 ]
             }
-
         }
     },
     "employment": {
@@ -199,7 +202,7 @@
         "aboutSite": {
             "title": "About this site",
             "paragraph": [
-                "The site has been created to showcase my technical skill set. I hope this has been conveyed from an end-user’s perspective and through analyse of the underlying source code 🔬.",
+                "The site has been created to showcase my technical skill set. I hope this has been conveyed from an end-user’s perspective and through analysis of the underlying source code 🔬.",
                 "I aimed to build a responsive site, with special attention placed on load times and accessibility. Please see links to the source code in the footer.",
                 "If you like what you see, feel free to drop me a message on LinkedIn!"
             ]    

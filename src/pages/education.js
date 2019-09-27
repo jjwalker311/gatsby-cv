@@ -22,31 +22,34 @@ export default function Education() {
 
   const tiles = useMemo(() => ([
     {
-      // Primary/Grammar School
-      title: lang.tiles.primaryGrammar.title,
-      bulletPoints: lang.tiles.primaryGrammar.bulletPoints,
-      imagePosition: POSITION.LEFT,
-      backgroundColour: COLOURS.BACKGROUND.BLUE,
-      textColour: COLOURS.LIGHT,
-      image: <NorthernIreland />,
-    },
-    {
-      // Tertiary education
-      title: lang.tiles.tertiary.title,
-      bulletPoints: lang.tiles.tertiary.bulletPoints,
-      imagePosition: POSITION.RIGHT,
-      backgroundColour: COLOURS.BACKGROUND.DARK_BLUE,
-      textColour: COLOURS.LIGHT,
-      image: <Edinburgh />,
-    },
-    {
       // Further learning
       title: lang.tiles.other.title,
+      subtitle: lang.tiles.other.subtitle,
       bulletPoints: lang.tiles.other.bulletPoints,
       imagePosition: POSITION.RIGHT,
       backgroundColour: COLOURS.BACKGROUND.TURQUOISE,
       textColour: COLOURS.LIGHT,
       image: <OtherEducation />,
+    },
+    {
+      // Tertiary education
+      title: lang.tiles.tertiary.title,
+      subtitle: lang.tiles.tertiary.subtitle,
+      bulletPoints: lang.tiles.tertiary.bulletPoints,
+      imagePosition: POSITION.RIGHT,
+      backgroundColour: COLOURS.BACKGROUND.BLUE,
+      textColour: COLOURS.LIGHT,
+      image: <Edinburgh />,
+    },
+    {
+      // Primary/Grammar School
+      title: lang.tiles.primaryGrammar.title,
+      subtitle: lang.tiles.primaryGrammar.subtitle,
+      bulletPoints: lang.tiles.primaryGrammar.bulletPoints,
+      imagePosition: POSITION.LEFT,
+      backgroundColour: COLOURS.BACKGROUND.DARK_BLUE,
+      textColour: COLOURS.LIGHT,
+      image: <NorthernIreland />,
     },
   ]));
 

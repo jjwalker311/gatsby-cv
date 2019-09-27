@@ -6,7 +6,7 @@ const Vodafone = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "vodafone.jpg" }) {
+        placeholderImage: file(relativePath: { eq: "voda.png" }) {
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid

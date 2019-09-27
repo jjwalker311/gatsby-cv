@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Jonathan J Walker`,
-    description: `CV driven by Gatsby and ReactJS`,
+    title: `Jonathan Walker CV`,
+    description: `Jonathan James Walker - Curriculum vitae with Gatsby and ReactJS`,
     author: `@jonathanjwalker`,
   },
   plugins: [

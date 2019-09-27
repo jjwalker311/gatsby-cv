@@ -37,7 +37,12 @@ export default function FrequentlyAskedQuestions({ title, content }) {
         content.map(({ question, answer }, index) => {
           const openOrNot = classNames({ open: expandedFAQ === index });
           return (
-            <div key={`${question}-${answer}`} onClick={() => faqTrigger(index)} role="presentation">
+            <div
+              key={`${question}-${answer}`}
+              onClick={() => faqTrigger(index)}
+              role="presentation"
+              tabIndex={index + 10}
+            >
               <Paragraph
                 className={openOrNot}
                 fontSize={20}
@@ -60,6 +65,7 @@ export default function FrequentlyAskedQuestions({ title, content }) {
               </Paragraph>
               <div
                 className={openOrNot}
+                tabIndex={-1}
                 css={css`
                  max-height: 0;
                  transition: max-height 0.25s ease;

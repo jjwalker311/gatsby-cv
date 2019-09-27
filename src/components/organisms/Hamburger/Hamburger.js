@@ -55,7 +55,7 @@ export default function Hamburger({ children }) {
         </div>
 
         <HamburgerMenu>
-          {children}
+          {children(checked)}
         </HamburgerMenu>
       </div>
 

@@ -7,6 +7,7 @@ import COLOURS from 'constants/colours';
 export function HamburgerSpan({ checked }) {
   return (
     <span
+      tabIndex={-1}
       css={css`
             display: block;
             width: 33px;
