@@ -23,7 +23,7 @@ export default function Paragraph(props) {
       css={css`
             color: ${color};
             font-weight: ${bold ? 'bold' : 'normal'};
-            font-size: ${fontSize + 3}px;
+            font-size: ${fontSize + 1}px;
             @media (min-width: ${BREAKPOINTS.TABLET}px) {
               font-size: ${fontSize}px;
             }

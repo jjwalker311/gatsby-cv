@@ -22,10 +22,10 @@
                 "title": "Primary/Secondary",
                 "subtitle": "1992-2006",
                 "bulletPoints": [
-                    "SOME POINT",
-                    "SOME OTHER POINT",
-                    "SOME POINT",
-                    "SOME OTHER POINT"
+                    "I attended Wallace High School in Northern Ireland. I achieved an A in Physics and Maths, with a B in Geography in my A-Levels. I gained 9 GSCEs, 7 grade A or above.",
+                    "Whilst in Grammar school, I starting programming for the first time. For the largest part I am self-taught, however I was able to gain some real-world experience through summer employment in a local software house.",
+                    "In 1999 I won \"Top the Form\" in the RUC Challenge 🏆, essentially a Pub Quiz for 11 year olds in Northern Ireland.",
+                    "I went to St. Johns Primary Primary school, a small country school seemingly untouched from its construction in Victorian times."
                 ]
             },
             "tertiary": {
@@ -34,18 +34,18 @@
                 "bulletPoints": [
                     "I graduated with First Class Honours while sitting for Masters of Engineering. Upon graduation I placed third in my year.",
                     "A multi-faceted course combining various aspects of Civil, Chemical, Fire Safety and Structural Engineering with Architectural History and Theory.",
-                    "I decided to specilise in Structural and Fire safety engineering. The balance of mathematical challenge and creative problem solving most closely matched to my skillset over pure Architecture.",
-                    "My thesis on “Hybrid Reinforced Concrete under Fire Conditions” was published in a Professional Engineer Journal."
+                    "I decided to specialise in Structural and Fire safety engineering. The balance of mathematical challenge and creative problem solving most closely matched to my skillset over pure Architecture.",
+                    "The Fire Engineering department is world renowned and the primary academic source for investigation following 9/11. My thesis in this area on “Hybrid Reinforced Concrete under Fire Conditions” was published in a Professional Engineer Journal."
                 ]
             },
             "other": {
                 "title": "Further learning",
                 "subtitle": "2011-to-date",
                 "bulletPoints": [
-                    "SOME POINT",
-                    "SOME OTHER POINT",
-                    "SOME POINT",
-                    "SOME OTHER POINT"
+                    "Working in Software development requires constant refinement following best industry practices and adoption of the latest and greatest frameworks and libraries.",
+                    "Since 2011, my primary focus has moved from IBM Dojo to AngularJS and finally to ReactJS. To assist this journey, I attempt to keep up with a number of blog posts and YouTube tutorials, alongside keeping track latest developments by following industry conferences.",
+                    "I attended the Mobile Academy for a semester in UCL. Evening classes focused on the business, design and technological aspects of mobile products.",
+                    "I like to have small projects running at the side to try out anything that peaks my interest. This varies from trialing a technology such as GraphQL or Gatsby, to re-creating a Pokémon Gameboy map 🗾 in React."
                 ]
             }
         }
@@ -59,37 +59,39 @@
         "tiles": {
             "vodafone": {
                 "title": "MMT Digital - Vodafone",
-                "subtitle": "From AAAA to BBBB",
+                "subtitle": "Senior Developer - 2018 to date",
                 "bulletPoints": [
-                    "SOME POINT",
-                    "SOME OTHER POINT",
-                    "SOME POINT",
-                    "SOME OTHER POINT"
+                    "I was responsible for developing Vodafone broadband and handset products, I have moved to Enterprise side of the business. My responsibilities consist of the following:",
+                    "Acting as a source of expertise for unit, integration and visual testing",
+                    "Maintaining and teaching best development practices to deliver high quality code",
+                    "Providing a steer towards department-level processes including code quality metrics, usage and versioning of React and testing strategy; and",
+                    "Defining team estimates and running planning sessions, both at a 3-month Enterprise level and on a sprint-by-sprint level."
                 ]
             },
             "cognitoIq": {
                 "title": "Cognito IQ",
-                "subtitle": "From AAAA to BBBB",
+                "subtitle": "Team Lead/Senior Developer - From 2016 to 2018",
                 "bulletPoints": [
-                    "SOME POINT",
-                    "SOME OTHER POINT",
-                    "SOME POINT",
-                    "SOME OTHER POINT"
+                    "As one of two Senior Engineers, I lead development on complex items, reviewed code delivery of others and mentored junior members of the team. I was responsible for end-to-end solution ownership and delivery for half of our clients", 
+                    "I drove improvements in business practices such as our Jira and build processes",
+                    "On top of my existing roles and responsibilities as a Senior Engineer, I line-managed a multi-faceted team of 11 and interviewed new applicants",
+                    "I took ownership of sprint planning and Jira management for a rolling 8-week plan and was responsible for Team RPIs"
                 ]
             },
             "ibm": {
                 "title": "IBM UK",
-                "subtitle": "From AAAA to BBBB",
+                "subtitle": "Technical Consultant - From 2012 to 2016",
                 "bulletPoints": [
-                    "SOME POINT",
-                    "SOME OTHER POINT",
-                    "SOME POINT",
-                    "SOME OTHER POINT"
+                    "I worked as a front-end developer over a variety of client facing projects across across retail and banking sectors.",
+                    "I initially worked on mobile proof of concepts implementing IBM Worklight and Angular frameworks, tailored for a number of pharmaceutical, fashion and grocery high street retailers",
+                    "After successfully pitching to the large British Supermarket chain Waitrose, I was employed to create, develop and maintain a mobile website and subsequent iOS and Android hybrid apps over an 18-month period",
+                    "Following on, I worked with the British multinational Barclays based out of Canary Wharf, developing the front end of a web portal with the use of Angular",
+                    "In an internal project, I created an integration layer with IBM Watson, a computer system tailored for natural language dialogue. This assisted a Virtual assistant was then pitched to prospective clients."
                 ]
             },
             "tgm": {
                 "title": "TGM Ltd.",
-                "subtitle": "From AAAA to BBBB",
+                "subtitle": "From 2005 to 2012",
                 "bulletPoints": [
                     "SOME POINT",
                     "SOME OTHER POINT",
@@ -103,23 +105,43 @@
             "content": [
                 {
                     "question": "What am I looking for in a job?",
-                    "answer": "???"
+                    "answer": "The ability work with a modern tech stack (ideally React based), where I can add maximise my value in a senior role. I would like a voice when it comes technology strategy, team processes and coding standards. I also find great enjoyment in helping others grow around me, through line-management or informal tutelage."
+                },
+                {
+                    "question": "What are my best professional qualities?",
+                    "answer": "Leading a team from the front, delivering high quality solution and efficient problem solving mentality."
                 },
                 {
                     "question": "Am I open to contracting roles?",
-                    "answer": "???"
+                    "answer": "Certainly, depending on location, remote working options and compensation. For duration of contract, ideally would not under 6 months."
                 },
                 {
                     "question": "What job locations would be acceptable?",
-                    "answer": "???"
+                    "answer": "Within commutable distance from SP11 - Newbury, Basingstoke, Southampton, Swindon, Reading, Bracknell, Oxford, London - see below"
                 },
                 {
-                    "question": "What level of management experience do I have?",
-                    "answer": "???"
+                    "question": "What about London based roles?",
+                    "answer": "Yes, with caveats. I'm currently ~2 hours each way from London, so commuting 5 days a week is a non-starter. Remote-working options would be a must, with easy transport links from Waterloo/Clapham Junction."
                 },
                 {
-                    "question": "Where do I see myself in 10 years?",
-                    "answer": "???"
+                    "question": "What level of Line Management experience do I have?",
+                    "answer": "I started whilst at IBM with a single developer. When working at Cognito I managed a multifaceted team of 11. I was responsible for goal setting, 1-to-1's, appraisals and salary review. This has continued into my current role at MMT, where at manage a smaller group many of them are themselves line managers."
+                },
+                {
+                    "question": "What experience do I have leading a team?",
+                    "answer": "I have lead teams on a day-to-day basis on my last two roles. This consists of defining team processes, engaging with stakeholders, delivering estimates, planning work and ensuring deliverables are met."
+                },
+                {
+                    "question": "What are my salary expectations?",
+                    "answer": "Outside of London £77k+ or £400+/day, within London £90k+ or <£500+. All figures depend on location and commutability."
+                },
+                {
+                    "question": "I am willing to re-locate for a role?",
+                    "answer": "No. Apart from life changing compensation and you will need to convince my partner."
+                },
+                {
+                    "question": "Tabs or spaces?",
+                    "answer": "2 spaces"
                 }
             ]
         }

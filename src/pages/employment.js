@@ -1,4 +1,6 @@
-import React, { useContext, useMemo } from 'react';
+import React, {
+  useContext, useMemo, useRef, useLayoutEffect,
+} from 'react';
 
 import TitlePanel from 'components/atoms/TitlePanel';
 
@@ -17,10 +19,17 @@ import CognitoIQ from 'components/atoms/Images/CognitoIQ';
 import Ibm from 'components/atoms/Images/Ibm';
 import Tgm from 'components/atoms/Images/Tgm';
 
+import parseQueryString from 'helpers/parseQueryString';
+import get from 'helpers/get';
+
+
 import LocaleContext from 'locale';
 
-export default function Employment() {
+export default function Employment({ location }) {
   const lang = useContext(LocaleContext).employment;
+
+  // Ref to FAQ section at base
+  const faqRef = useRef(null);
 
   // Tiles to show employment history
   const tiles = useMemo(() => [
@@ -66,6 +75,17 @@ export default function Employment() {
     },
   ]);
 
+  // Using useLayoutEffect as we need to make measurements post render
+  useLayoutEffect(() => {
+    // To happen ONLY once, pulling out scrollToFaq param
+    const { scrollToFaq } = parseQueryString(get(location, 'search', ''));
+
+    if (scrollToFaq) {
+      // We want to go to FAQ section
+      window.scrollTo(0, faqRef.current.offsetTop);
+    }
+  }, []);
+
   return (
     <Layout currentPage={PAGES.EMPLOYMENT}>
 
@@ -82,7 +102,9 @@ export default function Employment() {
 
       <BulletImages tiles={tiles} />
 
-      <FrequentlyAskedQuestions title={lang.faq.title} content={lang.faq.content} />
+      <div ref={faqRef}>
+        <FrequentlyAskedQuestions title={lang.faq.title} content={lang.faq.content}/>
+      </div>
     </Layout>
   );
 }
