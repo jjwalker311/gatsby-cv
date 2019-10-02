@@ -1,6 +1,7 @@
 import React, { useContext, useMemo } from 'react';
 
 import TitlePanel from 'components/atoms/TitlePanel';
+import Quote from 'components/atoms/Quote';
 
 import Seo from 'components/molecules/Seo';
 import Layout from 'components/molecules/Layout';
@@ -51,7 +52,7 @@ export default function Education() {
       textColour: COLOURS.LIGHT,
       image: <NorthernIreland />,
     },
-  ]));
+  ]), []);
 
   return (
     <Layout currentPage={PAGES.EDUCATION}>
@@ -62,8 +63,10 @@ export default function Education() {
         backgroundColour={COLOURS.BACKGROUND.REALLY_DARK_BLUE}
         textAlign={POSITION.CENTER}
       >
-        { `"${lang.header.quote}" - ` }
-        <i>{ lang.header.author }</i>
+        <Quote
+          quote={lang.header.quote}
+          author={lang.header.author}
+        />
       </TitlePanel>
 
       <BulletImages tiles={tiles} />

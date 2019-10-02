@@ -1,6 +1,7 @@
 import React, { useContext, useMemo } from 'react';
 
 import TitlePanel from 'components/atoms/TitlePanel';
+import Quote from 'components/atoms/Quote';
 import PersonalBackground from 'components/atoms/Images/PersonalBackground';
 
 import Layout from 'components/molecules/Layout';
@@ -41,7 +42,7 @@ export default function Personal() {
       textColour: COLOURS.LIGHT,
       image: <BorneoKids />,
     },
-  ]);
+  ], []);
 
   return (
     <Layout currentPage={PAGES.ABOUT_ME}>
@@ -53,31 +54,33 @@ export default function Personal() {
         textColour={COLOURS.LIGHT}
         textAlign={POSITION.CENTER}
       >
-        { `"${lang.header.quote}" - ` }
-        <i>{ lang.header.author }</i>
+        <Quote
+          quote={lang.header.quote}
+          author={lang.header.author}
+        />
       </TitlePanel>
 
       <PersonalBackground />
 
       <TitlePanel
-        title={lang.header.title}
+        title={lang.aboutMe.header.title}
         backgroundColour={COLOURS.LIGHT}
-        textColour={COLOURS.DARK}
+        textColour={COLOURS.BACKGROUND.REALLY_DARK_BLUE}
         textAlign={POSITION.CENTER}
       >
-          BLAH
+        { lang.aboutMe.header.children }
       </TitlePanel>
 
       <BulletImages tiles={tiles} />
 
-      <TitlePanel
-        title={lang.header.title}
+      {/* <TitlePanel
+        title={lang.aboutMe.footer.title}
         backgroundColour={COLOURS.LIGHT}
         textColour={COLOURS.DARK}
         textAlign={POSITION.CENTER}
       >
-          BLAH
-      </TitlePanel>
+        { lang.aboutMe.footer.children }
+      </TitlePanel> */}
     </Layout>
   );
 }

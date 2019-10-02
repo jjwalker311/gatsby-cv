@@ -42,7 +42,7 @@ const IndexPage = () => {
       backgroundColour: COLOURS.BACKGROUND.BLUE,
       textColour: COLOURS.LIGHT,
     },
-  ]);
+  ], []);
 
   return (
     <Layout currentPage={PAGES.HOME}>

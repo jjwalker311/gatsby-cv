@@ -21,6 +21,7 @@ import { LocaleProvider } from 'locale';
 
 // TODO: Allow switching of language based on something
 import ENGLISH from 'locale/lang/en.json';
+// import DEUTSCH from 'locale/lang/de.json';
 
 import './Layout.css';
 

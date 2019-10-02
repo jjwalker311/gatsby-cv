@@ -1,7 +1,8 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import TitlePanel from 'components/atoms/TitlePanel';
+import Quote from 'components/atoms/Quote';
 
 import Layout from 'components/molecules/Layout';
 import Spotlights from 'components/molecules/Spotlights';
@@ -33,10 +34,11 @@ RenderContent.propTypes = {
   content: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
+
 export default function Skills() {
   const lang = useContext(LocaleContext).skills;
 
-  const spotlights = useMemo(() => [
+  const spotlights = [
     {
       SVG: CodingIcon,
       header: lang.spotlights.coding.header,
@@ -55,7 +57,7 @@ export default function Skills() {
       message: lang.spotlights.leadership.message,
       link: null,
     },
-  ]);
+  ];
 
   return (
     <Layout currentPage={PAGES.SKILLS}>
@@ -67,8 +69,10 @@ export default function Skills() {
         textColour={COLOURS.LIGHT}
         textAlign={POSITION.CENTER}
       >
-        { `"${lang.header.quote}" - ` }
-        <i>{ lang.header.author }</i>
+        <Quote
+          quote={lang.header.quote}
+          author={lang.header.author}
+        />
       </TitlePanel>
 
       <Spotlights items={spotlights} title={spotlights.title} />

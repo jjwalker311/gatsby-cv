@@ -1,15 +1,15 @@
 {
     "tabs": {
-        "employment": "employment",
-        "skills": "skills",
-        "education": "education",
-        "personal": "personal"
+        "employment": "Beschäftigung",
+        "skills": "Kompetenzen",
+        "education": "Bildung",
+        "personal": "persönlich"
     },
     "footer": {
         "linkedIn": "LinkedIn",
-        "github": "Github (for this site)",
-        "contacts": "Contacts",
-        "description": "© JonathanJWalker, Ltd. All Rights Reserved."
+        "github": "Github (für diese Website)",
+        "contacts": "Kontakte",
+        "description": "© JonathanJWalker, Ltd. Alle Rechte vorbehalten."
     },
     "education": {  
         "header": {
@@ -197,22 +197,22 @@
         }
     },
     "homepage": {
-        "button": "About me",
-        "title": "Meet Jonathan 👨🏻‍💻",
-        "description": "I am a Front-End Developer specialising in React solutions with 6 years experience working for clients across retail, banking and telecom sectors.",
+        "button": "Über mich",
+        "title": "Treffen Jonathan 👨🏻‍💻",
+        "description": "Ich bin ein Front-End-Entwickler, der sich auf React-Lösungen spezialisiert hat und seit 6 Jahren für Kunden aus den Bereichen Einzelhandel, Banken und Telekommunikation tätig ist.",
         "spotlights": {
-            "title": "Professional Snapshots",
+            "title": "Professionelle Schnappschüsse",
             "employment": {
-                "header": "Employment☝️",
-                "message": "Starting from a family run Software company (🐑), to multinational Consultancy firms and Digital Design agencies."
+                "header": "Beschäftigung☝️",
+                "message": "Angefangen von einem familiengeführten Softwareunternehmen (🐑) bis hin zu multinationalen Beratungsunternehmen und Digital Design-Agenturen."
             },
             "skills": {
                 "header": "Skills☝️",
-                "message": "I have a strong skill-set in web-based technologies and specialise in React solutions."
+                "message": "Ich verfüge über umfassende Kenntnisse in webbasierten Technologien und bin auf React-Lösungen spezialisiert."
             },
             "education": {
-                "header": "Education☝️",
-                "message": "I was born in Northern Ireland, studied Architecture in Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿 ."
+                "header": "Bildung☝️",
+                "message": "Ich wurde in Nordirland geboren und studierte Architektur in Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿 ."
             }
         },
         "aboutSite": {
@@ -245,8 +245,8 @@
             "golf": {
                 "title": "Golf/Ice hockey",
                 "bulletPoints": [
-                    "I have played golf since I was a child, I find it an excellent way to spend time outdoors and focus my mind away from outside distractions.",
-                    "I find that golf has a way of picking you up when you are down, while also checking your ego when you act pridefully.",
+                    "I have played golf since I was a child, I find it an excellent way spend time outdoors and focus my mind away from all outside distractions.",
+                    "I find that golf has a way of picking you up when you are down, while also checking your ego if you act pridefully.",
                     "Although I have never played Ice Hockey, I have always enjoyed watching the sport, as I am a keen ice skater myself. I have travelled to various cities in Europe and North America to watch games and I am a keen supporter of the Toronto Mapleleafs."
                 ]
             },
@@ -254,9 +254,9 @@
                 "title": "Raleigh International - Borneo",
                 "bulletPoints": [
                     "I volunteered as a Project Manager on a 4 month expedition to Borneo. During my time away I worked on two projects in addition to exploring in the Primary Rainforest with local Army guides.",
-                    "I aided the construction of a research station in Danum Valley Rainforest. This was logically very challenging due to the remote location and the fact that all supplies needed to be hiked in. While complex, it was very rewarding as we were allowed access to forest beyond the scope of the general public.",
-                    "I was involved in the construction of a Primary school in the mountain top village of Linka Buagyan. A benefit of this project was the opportunity to teach daily English classes with the local children. The sunrises were also spectacular as seen at the top of the page.",
-                    "This was my first official experience of pastural care with junior volunteers when working away from home in an alien environment."
+                    "I aided the construction of a research station in Danum Valley Rainforest. This was logically very challenging due to the remote location and the fact that all supplies needed to be hiked in. While complex, it was very rewarding as we were allowed access to forest beyond where the general public were allowed.",
+                    "I was involved in the construction of a Primary school in the mountain top village of Linka Buagyan. A benefit of this project was the opportunity to teach daily English classes with the local children. The sunrises were also spectacular on a daily basis as seen at the top of the page.",
+                    "This was my first official experience of pastural care of junior volunteers when working away from home in an alien environment."
                 ]
             }
         },
@@ -265,7 +265,7 @@
                 "title": "Personality",
                 "children": [
                     "Personality clearly plays a large role in effective teamwork. I attempt to use my attitude and drive to show commitment to a cause, which naturally rubs off on those around me.",
-                    "Humour is also a large part of maintaining a good team dynamic, whether to lift the mood in a low situation or to create a fertile environment for innovation and creativity.",
+                    "Humour is also a large part of maintaining a good dynamic, whether to lift the mood in a low situation or to create a fertile environment for innovation and creativity.",
                     "I like to challenge myself and constantly strive to improve, both in learning latest features in React and improving my putting 🏌. Personal challenge and ambition is something I expect in those around me in the office environment, helping to drive our team and the wider business forward."
                 ]
             },

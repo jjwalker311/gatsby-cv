@@ -42,7 +42,7 @@ function BulletList({
   title, bulletPoints, textColour, subtitle,
 }) {
   return (
-    <div style={{ padding: '1em' }}>
+    <div style={{ padding: '1em 1em 1em 0' }}>
       <Heading level={2} colour={textColour} style={{ marginBottom: 0 }}>
         {title}
       </Heading>
@@ -53,7 +53,7 @@ function BulletList({
 
       <ul>
         {
-            bulletPoints.map(point => <li style={{ color: textColour }}>{point}</li>)
+          bulletPoints.map(point => <li style={{ color: textColour }}>{point}</li>)
         }
       </ul>
     </div>

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 
-import * as PROP_TYPES from 'constants/propTypes';
 import COLOURS from 'constants/colours';
 import POSITION from 'constants/positions';
 import BREAKPOINTS from 'constants/breakpoints';
@@ -61,7 +60,7 @@ function Spotlight({
       `}
     >
       <If condition={showAsLink}>
-        <Link to={link}>
+        <Link to={link} style={{ textDecoration: 'none' }}>
           <ImageAndTitle SVG={SVG} title={header} />
         </Link>
       </If>
@@ -82,7 +81,12 @@ function Spotlight({
   );
 }
 
-Spotlight.propTypes = { ...PROP_TYPES.SPOTLIGHT };
+Spotlight.propTypes = {
+  SVG: PropTypes.func.isRequired,
+  header: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  link: PropTypes.string,
+};
 
 Spotlight.defaultProps = {
   link: '/',
@@ -106,8 +110,8 @@ export default function Spotlights({ items, title }) {
         responsiveStructure={`repeat(${items.length}, 1fr)`}
       >
         {
-          items.map(({ ...props }, i) => (
-            <Spotlight {...props} key={`${items[i].message}`} />
+          items.map(({ ...props }) => (
+            <Spotlight {...props} key={props.message} />
           ))
         }
       </ResponsivePanel>
@@ -116,6 +120,11 @@ export default function Spotlights({ items, title }) {
 }
 
 Spotlights.propTypes = {
-  items: PropTypes.arrayOf(PROP_TYPES.SPOTLIGHT).isRequired,
+  items: PropTypes.arrayOf({
+    SVG: PropTypes.func.isRequired,
+    header: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    link: PropTypes.string,
+  }).isRequired,
   title: PropTypes.string.isRequired,
 };

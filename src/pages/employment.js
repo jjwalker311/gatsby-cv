@@ -1,8 +1,14 @@
 import React, {
   useContext, useMemo, useRef, useLayoutEffect,
 } from 'react';
+import PropTypes from 'prop-types';
 
 import TitlePanel from 'components/atoms/TitlePanel';
+import Vodafone from 'components/atoms/Images/Vodafone';
+import CognitoIQ from 'components/atoms/Images/CognitoIQ';
+import Ibm from 'components/atoms/Images/Ibm';
+import Tgm from 'components/atoms/Images/Tgm';
+import Quote from 'components/atoms/Quote';
 
 import Seo from 'components/molecules/Seo';
 import Layout from 'components/molecules/Layout';
@@ -14,14 +20,9 @@ import PAGES from 'constants/pages';
 import COLOURS from 'constants/colours';
 import POSITION from 'constants/positions';
 
-import Vodafone from 'components/atoms/Images/Vodafone';
-import CognitoIQ from 'components/atoms/Images/CognitoIQ';
-import Ibm from 'components/atoms/Images/Ibm';
-import Tgm from 'components/atoms/Images/Tgm';
-
 import parseQueryString from 'helpers/parseQueryString';
 import get from 'helpers/get';
-
+import scrollTo from 'helpers/scrollTo';
 
 import LocaleContext from 'locale';
 
@@ -73,17 +74,15 @@ export default function Employment({ location }) {
       textColour: COLOURS.LIGHT,
       image: <Tgm />,
     },
-  ]);
+  ], []);
 
   // Using useLayoutEffect as we need to make measurements post render
   useLayoutEffect(() => {
     // To happen ONLY once, pulling out scrollToFaq param
     const { scrollToFaq } = parseQueryString(get(location, 'search', ''));
 
-    if (scrollToFaq) {
-      // We want to go to FAQ section
-      window.scrollTo(0, faqRef.current.offsetTop);
-    }
+    // We want to go to FAQ section
+    if (scrollToFaq) scrollTo(faqRef);
   }, []);
 
   return (
@@ -96,15 +95,21 @@ export default function Employment({ location }) {
         textColour={COLOURS.BACKGROUND.REALLY_DARK_BLUE}
         textAlign={POSITION.CENTER}
       >
-        { `"${lang.header.quote}" - ` }
-        <i>{ lang.header.author }</i>
+        <Quote
+          quote={lang.header.quote}
+          author={lang.header.author}
+        />
       </TitlePanel>
 
       <BulletImages tiles={tiles} />
 
       <div ref={faqRef}>
-        <FrequentlyAskedQuestions title={lang.faq.title} content={lang.faq.content}/>
+        <FrequentlyAskedQuestions title={lang.faq.title} content={lang.faq.content} />
       </div>
     </Layout>
   );
 }
+
+Employment.propTypes = {
+  location: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types,
+};
