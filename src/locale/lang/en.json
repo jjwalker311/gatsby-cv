@@ -149,30 +149,29 @@
         "spotlights": {
             "title": "Snapshots",
             "coding": {
-                "header": "Software development",
-                "message": "Codes to a high standard, enjoys complex programming challenges"
+                "header": "Software Development",
+                "message": "I code to a high standard and enjoy complex programming challenges."
             },
             "leadership": {
                 "header": "Leadership",
-                "message": "Leads from the front, strong estimation and planning skills"
+                "message": "I lead from the front and pride myself on strong estimation and planning skills."
             },
             "testing": {
-                "header": "Quality assurance",
-                "message": "Drives development from various levels of testing"
+                "header": "Quality Assurance",
+                "message": "I drive development through various levels of testing."
             }
         },
         "content": {
             "coding": {
-                "title": "Software development",
+                "title": "Software Development",
                 "paragraphs": [
-                    "I code to a high standard and thrive on tackling complex programming challenges.",
-                    "I strive to continuously refine my skill-set and bring new technology and coding patterns to client facing roles.",
-                    "I have a pragmatic problem solving ability, with the ability to quickly assess a situation by gathering appropriate information to deliver a fix.",
-                    "I have experience in mentoring junior developers by creating a structured a learning plan, delivering lightning talks and 1-to-1 sessions."
+                    "I strive to continuously refine my skill set and present new technology and coding patterns to the client.",
+                    "I have a pragmatic approach to problem solving and quickly assess a situation by gathering appropriate information to deliver a fix.",
+                    "I have also mentored junior developers including creating learning plan for them."
                 ]
             },
             "testing": {
-                "title": "Quality assurance",
+                "title": "Quality Assurance",
                 "paragraphs": [
                     "On recent projects, I have been brought in as a source of testing expertise. I have been driving for unit and integration testing of components to give confidence of their performance in production.",
                     "I have conducted a number of sessions on how testing should drive our work, not be an afterthought to placate business stakeholders.",
@@ -190,8 +189,8 @@
             "random": {
                 "title": "Random skills",
                 "paragraphs": [
-                    "In an effort to improve my ability to ingest and retain knowledge, I have attempted to learn all the capitals on the planet. The memorisation techniques I have learned can directly be applied to work related challenges and to the Geography round in a pub quiz.",
-                    "My girlfriend is passionate on all things designer bags, therefore I am well versed in the area. As such, I know my Gucci Marmont from Gucci Dionysus and Louis Vuitton Neverful from Louis Vuitton Pochette Métis."
+                    "I  like to learn unusual things, recently I have learnt all the capitals in the world. I am hoping that my new found knowledge will come in handy at the next a pub quiz (as I am fed up winning the crisps 🥔).",
+                    "My girlfriend is passionate on all things designer bags, therefore I am well versed in the area. As such, I know my Gucci Marmont from Gucci Dionysus and Louis Vuitton Neverfull from Louis Vuitton Pochette Métis."
                 ]
             }
         }
@@ -199,27 +198,27 @@
     "homepage": {
         "button": "About me",
         "title": "Meet Jonathan 👨🏻‍💻",
-        "description": "I am a Front-End Developer specialising in React solutions with 6 years experience working for clients across retail, banking and telecom sectors.",
+        "description": "I am a Front-End Developer specialising in React solutions with 6 years experience working for clients across the retail, banking and telecom sectors.",
         "spotlights": {
             "title": "Professional Snapshots",
             "employment": {
                 "header": "Employment☝️",
-                "message": "Starting from a family run Software company (🐑), to multinational Consultancy firms and Digital Design agencies."
+                "message": "Experience spanning across sectors including, a family run Software company (🐑), multinational Consultancy firms and Digital Design agencies."
             },
             "skills": {
                 "header": "Skills☝️",
-                "message": "I have a strong skill-set in web-based technologies and specialise in React solutions."
+                "message": "I have a strong skill set in web-based technologies and specialise in React solutions."
             },
             "education": {
                 "header": "Education☝️",
-                "message": "I was born in Northern Ireland, studied Architecture in Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿 ."
+                "message": "I obtained a first class honours degree in Engineering (MEng) at the University of Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿 ."
             }
         },
         "aboutSite": {
-            "title": "About this site",
+            "title": "About",
             "paragraph": [
-                "This site has been created to showcase my technical skill set. I hope this is conveyed from an end-user’s perspective and through analysis of the underlying source code 🔬.",
-                "I aimed to build a responsive site with special attention paid to load times and accessibility. Please see links to the source code in the footer.",
+                "This site has been created to showcase my technical skill set.",
+                "I have built a responsive site paying attention load times and accessibility. Please see links to the source code in the footer. 🔬",
                 "If you like what you see, feel free to drop me a message on LinkedIn!"
             ]    
         },
@@ -229,8 +228,8 @@
                 "This site is built with React ⚛️ and Gatsby 🍾, using styled components from Emotion 👩‍🎤.",  
                 "React is a Javascript library maintained by Facebook that is used for constructing user interfaces.", 
                 "Gatsby is a React-based static site generator. This, alongside code splitting, intelligent image loading and asset optimisation leads to fast page loading times.",
-                "Emotion is a library designed for writing CSS in JavaScript. This removes the need for a global style-sheet and allows for co-location of style nearer to where it used.",
-                "I have created a \"atomic hierarchy\" to aid abstraction and reuse throughout the application. In the future this component library may be published in a open-source NPM repository.",
+                "Emotion is a library designed for writing CSS in JavaScript. This removes the need for a global style-sheet and allows for co-location of style nearer to where it is used.",
+                "I have created an \"atomic hierarchy\" to aid abstraction and reuse throughout the application. In the future this component library may be published in a open-source NPM repository.",
                 "All code (apart from React/Gatsby/Emotion dependencies) is my own and has been written from scratch."
             ]
         }
@@ -243,10 +242,9 @@
         },
         "tiles": {
             "golf": {
-                "title": "Golf/Ice hockey",
+                "title": "Golf/Ice Hockey",
                 "bulletPoints": [
                     "I have played golf since I was a child, I find it an excellent way to spend time outdoors and focus my mind away from outside distractions.",
-                    "I find that golf has a way of picking you up when you are down, while also checking your ego when you act pridefully.",
                     "Although I have never played Ice Hockey, I have always enjoyed watching the sport, as I am a keen ice skater myself. I have travelled to various cities in Europe and North America to watch games and I am a keen supporter of the Toronto Mapleleafs."
                 ]
             },

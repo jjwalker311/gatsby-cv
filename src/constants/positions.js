@@ -4,6 +4,7 @@ const POSITION = {
   TOP: 'top',
   BOTTOM: 'bottom',
   CENTER: 'center',
+  JUSTIFY: 'justify',
 };
 
 export default POSITION;

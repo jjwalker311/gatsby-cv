@@ -47,13 +47,13 @@ function BulletList({
         {title}
       </Heading>
 
-      <Paragraph style={{ textAlign: 'center', margin: 0 }} fontSize={12}>
+      <Paragraph style={{ margin: 0, textAlign: POSITION.CENTER }} fontSize={12}>
         <i>{ subtitle }</i>
       </Paragraph>
 
       <ul>
         {
-          bulletPoints.map(point => <li style={{ color: textColour }}>{point}</li>)
+          bulletPoints.map(point => <li style={{ color: textColour, textAlign: POSITION.JUSTIFY }}>{point}</li>)
         }
       </ul>
     </div>

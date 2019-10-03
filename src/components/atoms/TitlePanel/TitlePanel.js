@@ -53,7 +53,7 @@ TitlePanel.propTypes = {
   // Colour of the text (children/title)
   textColour: PropTypes.string,
   // Text alignment in the main body
-  textAlign: PropTypes.oneOf([POSITIONS.LEFT, POSITIONS.CENTER, POSITIONS.RIGHT]),
+  textAlign: PropTypes.oneOf([POSITIONS.LEFT, POSITIONS.CENTER, POSITIONS.RIGHT, POSITIONS.JUSTIFY]),
 };
 
 TitlePanel.defaultProps = {

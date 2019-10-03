@@ -11,6 +11,7 @@ import ResponsiveCTA from 'components/molecules/ResponsiveCTA';
 import PAGES from 'constants/pages';
 import PAGES_URL from 'constants/pageUrl';
 import COLOURS from 'constants/colours';
+import POSITIONS from 'constants/positions';
 
 import EducationIcon from 'assets/education.svg';
 import WorkIcon from 'assets/work.svg';
@@ -58,11 +59,19 @@ const IndexPage = () => {
 
       <Spotlights items={items} title={lang.spotlights.title} />
 
-      <TitlePanel title={lang.aboutSite.title} backgroundColour={COLOURS.BACKGROUND.DARK_BLUE}>
+      <TitlePanel
+        title={lang.aboutSite.title}
+        backgroundColour={COLOURS.BACKGROUND.DARK_BLUE}
+        textAlign={POSITIONS.JUSTIFY}
+      >
         { lang.aboutSite.paragraph }
       </TitlePanel>
 
-      <TitlePanel title={lang.techStack.title} backgroundColour={COLOURS.BACKGROUND.REALLY_DARK_BLUE}>
+      <TitlePanel
+        title={lang.techStack.title}
+        backgroundColour={COLOURS.BACKGROUND.REALLY_DARK_BLUE}
+        textAlign={POSITIONS.JUSTIFY}
+      >
         { lang.techStack.paragraph }
       </TitlePanel>
     </Layout>

@@ -125,6 +125,7 @@ const Header = ({ currentPage }) => {
             grid-gap: 1em;
             ${CENTRE_CENTRE}
             width: 55%;
+            text-align: center;
           `}
         >
           { columns }
