@@ -60,11 +60,11 @@
                 "title": "MMT Digital - Vodafone",
                 "subtitle": "Senior Developer - 2018 to date",
                 "bulletPoints": [
-                    "I am responsible for developing Vodafone broadband and handset products. My responsibilities consist of the following:",
+                    "I am responsible for developing Vodafone broadband and handset products. My day to day role includes:",
                     "Acting as a source of expertise for unit, integration and visual testing;",
-                    "Maintaining and teaching best development practices to deliver high quality code;",
-                    "Providing a steer towards department processes including code quality metrics, usage and versioning of React and testing strategy: and",
-                    "Defining team estimates and running planning sessions, both at a 3-month and on a week-by-week level"
+                    "Maintaining and teaching the best development practices to deliver high quality code;",
+                    "Providing a steer towards department processes including code quality metrics, usage and versioning of React and testing strategy; and",
+                    "Defining team estimates and running planning sessions, both at a 3-month and on a week-by-week level."
                 ]
             },
             "cognitoIq": {
@@ -72,29 +72,30 @@
                 "subtitle": "Team Lead/Senior Developer - 2016 to 2018",
                 "bulletPoints": [
                     "CognitoIQ delivered software for mobile workers in the Facilities Management, Courier and Retail Logistics sectors;", 
-                    "As one of two Senior Engineers, I led development on complex items, reviewed code delivery of others and mentored junior members of the team. I was responsible for solution ownership and delivery for half of their clients;", 
-                    "I ran sprint ceremonies, line-managed a team of 11 and interviewed new applicants; and",
-                    "I took ownership of sprint planning and Jira management for a rolling 8-week plan and was responsible for Team RPIs"
+                    "Led development on complex items, reviewed code delivery of others and mentored junior members of the team;", 
+                    "Responsible for solution ownership and delivery for half of their clients;",
+                    "Ran sprint ceremonies, line-managed a team of 11 and interviewed new applicants; and",
+                    "Took ownership of sprint planning and Jira management for a rolling 8-week plan and was responsible for Team RPIs."
                 ]
             },
             "ibm": {
                 "title": "IBM UK",
                 "subtitle": "Technical Consultant - 2012 to 2016",
                 "bulletPoints": [
-                    "I worked as a front-end developer over a variety of client facing projects across across retail and banking sectors;",
-                    "I initially worked on a mobile proof of concept implementing IBM Worklight and AngularJS;",
-                    "After successfully pitching to the large British Supermarket chain Waitrose, I was employed to create, develop and maintain a mobile website and subsequent iOS and Android hybrid apps over an 18-month period;",
-                    "Following on, I worked with the British multinational Barclays based out of Canary Wharf, developing the front end of a web portal; and",
-                    "I created an integration layer with IBM Watson, a computer system tailored for natural language dialogue. This assisted a virtual assistant which was then pitched to prospective clients"
+                    "Worked as a front-end developer over a variety of client facing projects across across retail and banking sectors;",
+                    "Initially worked on a mobile proof of concept implementing IBM Worklight and AngularJS;",
+                    "After successfully pitching to the large British Supermarket chain Waitrose, employed to create, develop and maintain a mobile website and subsequent iOS and Android hybrid apps over an 18-month period;",
+                    "Worked with the British multinational Barclays based out of Canary Wharf, developing the front end of a web portal; and",
+                    "Created an integration layer with IBM Watson, a computer system tailored for natural language dialogue. This assisted a virtual assistant which was then pitched to prospective clients."
                 ]
             },
             "tgm": {
                 "title": "TGM Ltd.",
                 "subtitle": "Junior Developer - 2005 to 2012",
                 "bulletPoints": [
-                    "This role involved developing software for agricultural purposes on mobile devices",
-                    "I played central role in the developmental process of three programs for handheld devices, whilst serving as liaison between the customer and the in-house design team; and",
-                    "I used the programming languages SQL, Borland Delphi and PocketStudio"
+                    "Developed software for agricultural purposes on mobile devices;",
+                    "Played central role in the developmental process of three programs for handheld devices, whilst serving as liaison between the customer and the in-house design team; and",
+                    "Used the programming languages SQL, Borland Delphi and PocketStudio."
                 ]
             }
         },
@@ -103,7 +104,7 @@
             "content": [
                 {
                     "question": "What am I looking for in a job?",
-                    "answer": "The ability work with a modern tech stack (ideally React based), where I can add maximise my value in a senior role. I would like a voice when it comes technology strategy, team processes and coding standards. I also find great enjoyment in helping others grow around me, through line-management or informal tutelage."
+                    "answer": "The ability work with a modern tech stack (ideally React based), where I can add maximise my value in a senior role. I would like to be involved when it comes technology strategy, team processes and coding standards. In addition, I find great enjoyment in helping others grow around me, through line-management or informal tutelage."
                 },
                 {
                     "question": "What are my best professional qualities?",
@@ -118,20 +119,20 @@
                     "answer": "Within commutable distance from SP11 - Newbury, Basingstoke, Southampton, Swindon, Reading, Bracknell, Oxford, London - see below"
                 },
                 {
-                    "question": "What about London based roles?",
-                    "answer": "Yes, with caveats. I'm currently ~2 hours each way from London, so commuting 5 days a week is a non-starter. Remote-working options would be a must, with easy transport links from Waterloo/Clapham Junction."
+                    "question": "Am I open to London based roles?",
+                    "answer": "Yes, with caveats. I'm currently 2 hours each way from London, so commuting 5 days a week is a non-starter. Remote-working options would be a must, with easy transport links from Waterloo/Clapham Junction."
                 },
                 {
                     "question": "What level of Line Management experience do I have?",
-                    "answer": "I started whilst at IBM with a single developer. When working at CognitoIQ I managed a team of 11. I was responsible for goal setting, 1-to-1's, appraisals and salary review. This has continued into my current role at MMT, where at manage a smaller group many of whom are line managers themselves."
+                    "answer": "I started whilst at IBM with a single developer. When working at CognitoIQ, I managed a team of 11. I was responsible for goal setting, 1-to-1's, appraisals and salary review. This has continued into my current role at MMT, where I manage a smaller group, many of whom are line managers themselves."
                 },
                 {
                     "question": "What experience do I have leading a team?",
-                    "answer": "I have lead teams on a day-to-day basis on my last two roles. This consists of defining team processes, engaging with stakeholders, delivering estimates, planning work and ensuring deliverables are met."
+                    "answer": "I have lead teams on a day-to-day basis on my last two roles. This consists of defining team processes, engaging with stakeholders, delivering estimates, planning work and ensuring deadlines are met."
                 },
                 {
-                    "question": "I am willing to re-locate for a role?",
-                    "answer": "No. Aside from life changing compensation and you will need to convince my partner."
+                    "question": "Am I willing to re-locate for a role?",
+                    "answer": "No. Aside from life changing compensation and you will need to convince my partner. Good luck."
                 },
                 {
                     "question": "Tabs or spaces?",
@@ -167,30 +168,30 @@
                 "paragraphs": [
                     "I strive to continuously refine my skill set and present new technology and coding patterns to the client.",
                     "I have a pragmatic approach to problem solving and quickly assess a situation by gathering appropriate information to deliver a fix.",
-                    "I have also mentored junior developers including creating learning plan for them."
+                    "I have mentored junior developers, including creating learning plans for them."
                 ]
             },
             "testing": {
                 "title": "Quality Assurance",
                 "paragraphs": [
                     "On recent projects, I have been brought in as a source of testing expertise. I have been driving for unit and integration testing of components to give confidence of their performance in production.",
-                    "I have conducted a number of sessions on how testing should drive our work, not be an afterthought to placate business stakeholders.",
-                    "I aim to construct robust tests from a consumer perspective and not to dissect implementation details. Doing so reduces both false negatives and false positives, thus eroding confidence in your testing strategy."
+                    "I have conducted a number of sessions on how testing should drive our work and not be an afterthought to placate business stakeholders.",
+                    "I aim to construct robust tests from a consumer perspective and not to dissect implementation details. This reduces both false negatives and false positives, thus losing confidence in your testing strategy."
                 ]
             },
             "leadership": {
                 "title": "Leadership",
                 "paragraphs": [
-                    "I always aim to lead a team from the front, attempting to balance meeting team deliverables with enabling growth of the individual. I enjoy being the point of contact with stakeholders, reducing noise for others and in doing so aiding productivity.",
-                    "I have a strong estimation and planning skills, with the ability to balance priorities of multiple projects. Ability to breakdown a large piece of work in discreet sections to aid delivery.",
-                    "I have experience in managing a team, completing individual appraisals and running interview sessions."
+                    "I always lead a team from the front, in order to balance meeting team deliverables whilst enabling growth of the individual. I enjoy being the point of contact with stakeholders, to ensure my team are able to maximise their productivity.",
+                    "I have strong estimation and planning skills and the ability to balance priorities whilst working on multiple projects. I also have the ability to breakdown a large piece of work into discreet sections aiding delivery.",
+                    "My experience includes managing a team, completing individual appraisals and running interview sessions."
                 ]
             },
             "random": {
                 "title": "Random skills",
                 "paragraphs": [
-                    "I  like to learn unusual things, recently I have learnt all the capitals in the world. I am hoping that my new found knowledge will come in handy at the next a pub quiz (as I am fed up winning the crisps 🥔).",
-                    "My girlfriend is passionate on all things designer bags, therefore I am well versed in the area. As such, I know my Gucci Marmont from Gucci Dionysus and Louis Vuitton Neverfull from Louis Vuitton Pochette Métis."
+                    "I  like to learn unusual things. Recently I have learnt all the capitals in the world. I am hoping that my new found knowledge will come in handy at the next pub quiz (as I am fed up winning the crisps 🥔).",
+                    "My girlfriend is passionate on all things designer bags and therefore I am well versed in this area. As such, I know my Gucci Marmont from my Gucci Dionysus and Louis Vuitton Neverfull from Louis Vuitton Pochette Métis."
                 ]
             }
         }
@@ -236,35 +237,34 @@
     },
     "personal": {
         "header": {
-            "title": "About me",
+            "title": "Personal",
             "quote": "You're only given a little spark of madness. You mustn't lose it.",
             "author": "Robin Williams"
         },
         "tiles": {
             "golf": {
-                "title": "Golf/Ice Hockey",
+                "title": "Golf and Ice Hockey",
                 "bulletPoints": [
-                    "I have played golf since I was a child, I find it an excellent way to spend time outdoors and focus my mind away from outside distractions.",
-                    "Although I have never played Ice Hockey, I have always enjoyed watching the sport, as I am a keen ice skater myself. I have travelled to various cities in Europe and North America to watch games and I am a keen supporter of the Toronto Mapleleafs."
+                    "Since a young age, I have enjoyed playing golf, both as a hobby and competitively.  I enjoy being outdoors and find that it is ab excellent way to de-stress.",
+                    "Although I have never played Ice Hockey, I have always enjoyed watching the sport. I have travelled to various cities in Europe and North America to watch games and I am a keen supporter of the Toronto Maple Leafs."
                 ]
             },
             "borneo": {
                 "title": "Raleigh International - Borneo",
                 "bulletPoints": [
-                    "I volunteered as a Project Manager on a 4 month expedition to Borneo. During my time away I worked on two projects in addition to exploring in the Primary Rainforest with local Army guides.",
-                    "I aided the construction of a research station in Danum Valley Rainforest. This was logically very challenging due to the remote location and the fact that all supplies needed to be hiked in. While complex, it was very rewarding as we were allowed access to forest beyond the scope of the general public.",
-                    "I was involved in the construction of a Primary school in the mountain top village of Linka Buagyan. A benefit of this project was the opportunity to teach daily English classes with the local children. The sunrises were also spectacular as seen at the top of the page.",
-                    "This was my first official experience of pastural care with junior volunteers when working away from home in an alien environment."
+                    "I volunteered as a Project Manager on a 4 month expedition to Borneo. During my time away, I worked on two projects, in addition to exploring the Primary Rainforest with local army guides.",
+                    "I helped with the construction of a research station in Danum Valley Rainforest. This involved many logical challenges, given the remote location and the fact that supplies could only be delivered by foot.",
+                    "I was also involved in the construction of a primary school in the mountain top village of Linka Buagyan. As part of this project, I taught English classes with the local children. The sunrises were also spectacular as seen at the top of the page."
                 ]
             }
         },
         "aboutMe": {
             "header": {
-                "title": "Personality",
+                "title": "About me",
                 "children": [
-                    "Personality clearly plays a large role in effective teamwork. I attempt to use my attitude and drive to show commitment to a cause, which naturally rubs off on those around me.",
+                    "I am a determined and committed individual and like to inspire those around me.",
                     "Humour is also a large part of maintaining a good team dynamic, whether to lift the mood in a low situation or to create a fertile environment for innovation and creativity.",
-                    "I like to challenge myself and constantly strive to improve, both in learning latest features in React and improving my putting 🏌. Personal challenge and ambition is something I expect in those around me in the office environment, helping to drive our team and the wider business forward."
+                    "I like to challenge myself and constantly strive to improve, both in learning the latest features in React and improving my putting 🏌."
                 ]
             },
             "footer": {

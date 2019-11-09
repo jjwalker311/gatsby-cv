@@ -98,8 +98,8 @@ Sticky.propTypes = {
 };
 
 Sticky.defaultProps = {
-  // Delay 1 second before displaying children
-  delay: 1000,
+  // Delay 2 seconds before displaying children
+  delay: 2000,
   // Show when scrolled one third of page
   whenToShow: 1 / 2,
 };
