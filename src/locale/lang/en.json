@@ -231,7 +231,7 @@
                 "Gatsby is a React-based static site generator. This, alongside code splitting, intelligent image loading and asset optimisation leads to fast page loading times.",
                 "Emotion is a library designed for writing CSS in JavaScript. This removes the need for a global style-sheet and allows for co-location of style nearer to where it is used.",
                 "I have created an \"atomic hierarchy\" to aid abstraction and reuse throughout the application. In the future this component library may be published in a open-source NPM repository.",
-                "All code (apart from React/Gatsby/Emotion dependencies) is my own and has been written from scratch."
+                "All code (apart from React, Gatsby and Emotion dependencies) is my own and has been written from scratch."
             ]
         }
     },
