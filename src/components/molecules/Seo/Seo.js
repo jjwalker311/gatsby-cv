@@ -58,6 +58,10 @@ function SEO({
           content: metaDescription,
         },
         {
+          name: 'author',
+          content: 'Jonathan J Walker',
+        },
+        {
           property: 'og:title',
           content: `${title} | ${site.siteMetadata.title}`,
         },
