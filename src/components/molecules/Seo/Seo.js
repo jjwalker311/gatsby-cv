@@ -66,6 +66,14 @@ function SEO({
           content: metaDescription,
         },
         {
+          property: 'og:url',
+          content: 'https://jonathanjameswalker.netlify.com',
+        },
+        {
+          property: 'og:image',
+          content: 'https://jonathanjameswalker.netlify.com/static/b07fc996034d096f0f9f8b8111acfe26/2a990/my-face.png',
+        },
+        {
           property: 'og:type',
           content: 'website',
         },
