@@ -71,7 +71,7 @@ function SEO({
         },
         {
           property: 'og:image',
-          content: 'https://jonathanjameswalker.netlify.com/static/b07fc996034d096f0f9f8b8111acfe26/2a990/my-face.png',
+          content: 'http://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
         },
         {
           property: 'og:type',
