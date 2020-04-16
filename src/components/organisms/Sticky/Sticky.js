@@ -31,26 +31,26 @@ export default function Sticky({ children, delay, whenToShow }) {
     }
   }
 
-  // On START of scroll, should view out of view
-  const start = () => {
-    safeSetState(false);
-  };
-
-  // On STOP of scroll, setInView depending on where we're scrolled to
-  const stop = (minPx) => {
-    if (minPx > getScrollTop()) {
-      // Sets to FALSE, if we're within top half of page
-      safeSetState(false);
-    } else {
-      // Sets to TRUE, if we're below top half of page
-      safeSetState(true);
-    }
-  };
-
   // Add scroll listener ONCE on initial render
   useEffect(() => {
     // Using new to initialise timeout handler required in "handler"
     const onScroll = new OnScroll();
+
+    // On START of scroll, should view out of view
+    const start = () => {
+      safeSetState(false);
+    };
+
+    // On STOP of scroll, setInView depending on where we're scrolled to
+    const stop = (minPx) => {
+      if (minPx > getScrollTop()) {
+        // Sets to FALSE, if we're within top half of page
+        safeSetState(false);
+      } else {
+        // Sets to TRUE, if we're below top half of page
+        safeSetState(true);
+      }
+    };
 
     // Pass start/stop callbacks to onScroll handler, along with a delay to trigger the "stop" callback
     const scrollCallBack = window.addEventListener('scroll', () => onScroll.handler(
@@ -64,7 +64,7 @@ export default function Sticky({ children, delay, whenToShow }) {
       // Tidy up after ourselves
       window.removeEventListener('scroll', scrollCallBack);
     };
-  }, []);
+  }, [delay, whenToShow]);
 
   return (
     <div

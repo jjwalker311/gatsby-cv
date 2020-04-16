@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 
 import TitlePanel from 'components/atoms/TitlePanel';
 import Quote from 'components/atoms/Quote';
@@ -21,7 +21,7 @@ import LocaleContext from 'locale';
 export default function Personal() {
   const lang = useContext(LocaleContext).personal;
 
-  const tiles = useMemo(() => [
+  const tiles = [
     // Golf
     {
       title: lang.tiles.golf.title,
@@ -42,7 +42,7 @@ export default function Personal() {
       textColour: COLOURS.LIGHT,
       image: <BorneoKids />,
     },
-  ], []);
+  ];
 
   return (
     <Layout currentPage={PAGES.ABOUT_ME}>

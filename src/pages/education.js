@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 
 import TitlePanel from 'components/atoms/TitlePanel';
 import Quote from 'components/atoms/Quote';
@@ -21,7 +21,7 @@ import LocaleContext from 'locale';
 export default function Education() {
   const lang = useContext(LocaleContext).education;
 
-  const tiles = useMemo(() => ([
+  const tiles = [
     {
       // Further learning
       title: lang.tiles.other.title,
@@ -52,7 +52,7 @@ export default function Education() {
       textColour: COLOURS.LIGHT,
       image: <NorthernIreland />,
     },
-  ]), []);
+  ];
 
   return (
     <Layout currentPage={PAGES.EDUCATION}>

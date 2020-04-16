@@ -7,7 +7,7 @@
     },
     "footer": {
         "linkedIn": "LinkedIn",
-        "github": "Github (for this site)",
+        "github": "GitHub (for this site)",
         "contacts": "Contacts",
         "description": "© JonathanJWalker, Ltd. All Rights Reserved."
     },
@@ -33,7 +33,7 @@
                 "bulletPoints": [
                     "I graduated with First Class Honours in a Masters of Engineering. Upon graduation, I placed third in my year.",
                     "This was a multi-faceted course combining various aspects of Civil, Chemical, Fire Safety and Structural Engineering with Architectural History and Theory.",
-                    "I specialised in Structural and Fire safety engineering. The balance of mathematical challenge and creative problem solving closely matched to my skillset.",
+                    "I specialised in Structural and Fire safety engineering. The balance of mathematical challenge and creative problem solving closely matched my skillset.",
                     "The University of Edinburgh's Fire Engineering department is world renowned and was the primary academic source for investigation following 9/11. My thesis in this area on “Hybrid Reinforced Concrete under Fire Conditions” was published in a professional engineering journal.",
                     "I continue to liaise with the University Careers Service, acting as a mentor for graduates hoping to move into Software Development."
                 ]
@@ -42,7 +42,7 @@
                 "title": "Further learning",
                 "subtitle": "2011-to-date",
                 "bulletPoints": [
-                    "Working in Software development requires constant personal refinement, through best industry practices and the adoption of the latest frameworks and libraries.",
+                    "Working in Software development requires constant personal refinement, through adoption of best industry practices and the latest frameworks and libraries.",
                     "Since 2011, my primary focus has moved from IBM Dojo to AngularJS and finally to ReactJS. To assist this journey, I keep up with a number of blog posts and YouTube tutorials, alongside research latest developments by following industry conferences.",
                     "I attended the Mobile Academy for a semester in UCL. Evening classes focused on the business, design and technological aspects of mobile products.",
                     "I like to have small side-projects to try out things that peak my interest. These vary from trialing technology such as GraphQL or Gatsby, to re-creating a Pokémon Gameboy map 🗾 in React."

@@ -1,5 +1,5 @@
 import React, {
-  useContext, useMemo, useRef, useLayoutEffect,
+  useContext, useRef, useLayoutEffect,
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -33,7 +33,7 @@ export default function Employment({ location }) {
   const faqRef = useRef(null);
 
   // Tiles to show employment history
-  const tiles = useMemo(() => [
+  const tiles = [
     {
       // Vodafone/MMT Digital
       title: lang.tiles.vodafone.title,
@@ -74,7 +74,7 @@ export default function Employment({ location }) {
       textColour: COLOURS.LIGHT,
       image: <Tgm />,
     },
-  ], []);
+  ];
 
   // Using useLayoutEffect as we need to make measurements post render
   useLayoutEffect(() => {
@@ -83,7 +83,7 @@ export default function Employment({ location }) {
 
     // We want to go to FAQ section
     if (scrollToFaq) scrollTo(faqRef);
-  }, []);
+  }, [location]);
 
   return (
     <Layout currentPage={PAGES.EMPLOYMENT}>

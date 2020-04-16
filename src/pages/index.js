@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 
 import TitlePanel from 'components/atoms/TitlePanel';
 import HomeBackground from 'components/atoms/Images/HomeBackground';
@@ -22,7 +22,7 @@ import LocaleContext from 'locale';
 const IndexPage = () => {
   const lang = useContext(LocaleContext).homepage;
 
-  const items = useMemo(() => [
+  const items = [
     {
       SVG: WorkIcon,
       header: lang.spotlights.employment.header,
@@ -43,7 +43,7 @@ const IndexPage = () => {
       backgroundColour: COLOURS.BACKGROUND.BLUE,
       textColour: COLOURS.LIGHT,
     },
-  ], []);
+  ];
 
   return (
     <Layout currentPage={PAGES.HOME}>
