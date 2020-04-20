@@ -17,6 +17,7 @@
     "gatsby-plugin-react-helmet": "^3.0.9",
     "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-sharp": "^2.0.28",
+    "gatsby-plugin-typescript": "^2.3.1",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-embed-video": "^1.7.1",
     "gatsby-source-filesystem": "^2.0.24",
@@ -32,6 +33,15 @@
     "react-i18next": "^10.5.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.1",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.13",
@@ -43,10 +53,12 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "gatsby-plugin-root-import": "^2.0.5",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^24.9.0",
+    "jest": "^25.4.0",
     "nodemon": "^1.18.10",
     "prettier": "^1.16.4",
-    "react-test-renderer": "^16.9.0"
+    "react-test-renderer": "^16.9.0",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
   },
   "keywords": [
     "gatsby"
@@ -60,7 +72,9 @@
     "serve": "gatsby serve",
     "test": "jest",
     "lint:js": "eslint \"src/**/*.js\"",
-    "lint": "npm run lint:js"
+    "lint": "npm run lint:js",
+    "type-check": "tsc --noEmit --skipLibCheck",
+    "type-check:watch": "npm run type-check -- --watch"
   },
   "repository": {
     "type": "git",
