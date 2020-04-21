@@ -1,15 +1,15 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import PropTypes from 'prop-types';
+import PropTypes, { InferProps } from 'prop-types';
 
 import BREAKPOINTS from 'constants/breakpoints';
 
 /**
  * Conditionally renders Children based on Mobile and Desktop boolean props
  */
-export default function OnlyDisplayWhen({
-  children, cssOverrides, mobile, desktop, cssDisplayWhenShown,
-}) {
+export default function OnlyDisplayWhen(props: InferProps<typeof OnlyDisplayWhen.propTypes>) {
+
+  const { children, cssOverrides, mobile, desktop, cssDisplayWhenShown } = props
   // Show CSS override OR just display inherit
   const cssToDisplay = cssOverrides || css`
     display:${cssDisplayWhenShown};
@@ -33,7 +33,7 @@ OnlyDisplayWhen.propTypes = {
   // Children to be conditionally rendered
   children: PropTypes.node.isRequired,
   // CSS Style overrides
-  cssOverrides: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  cssOverrides: PropTypes.any, // eslint-disable-line react/forbid-prop-types
   // Whether to display on Mobile
   mobile: PropTypes.bool,
   // Whether to display on Desktop

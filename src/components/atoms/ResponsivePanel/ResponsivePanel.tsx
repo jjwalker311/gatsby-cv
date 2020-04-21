@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { InferProps } from 'prop-types';
 import { css } from '@emotion/core';
 
 import BREAKPOINTS from 'constants/breakpoints';
 
-export default function ResponsivePanel(props) {
+export default function ResponsivePanel(props: InferProps<typeof ResponsivePanel.propTypes>) {
   const {
     breakpointAction,
     textAlign,

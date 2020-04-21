@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes, { InferProps } from 'prop-types';
 import React from 'react';
 import { css } from '@emotion/core';
 
@@ -13,7 +13,7 @@ import Paragraph from 'components/atoms/Paragraph';
 
 export default function TitlePanel({
   title, backgroundColour, textColour, textAlign, children,
-}) {
+}: InferProps<typeof TitlePanel.propTypes>) {
   return (
     <div
       css={css`
@@ -30,11 +30,11 @@ export default function TitlePanel({
         { title }
       </Heading>
 
-      <If condition={children}>
+      <If condition={!!children}>
         {
-          React.Children.map(children, child => (
-            <Paragraph color={textColour} style={{ textAlign }} key={child}>
-              { child }
+          React.Children.map(children, (child, index: number) => (
+            <Paragraph color={textColour} style={{ textAlign }} key={index}>
+              { child! }
             </Paragraph>
           ))
         }

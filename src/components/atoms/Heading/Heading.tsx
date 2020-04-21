@@ -1,37 +1,38 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { InferProps } from 'prop-types';
 import { css } from '@emotion/core';
 
 import POSITION from 'constants/positions';
 import COLOURS from 'constants/colours';
 
-export default function Heading(props) {
-  const {
+export default function Heading(
+  {
     level,
     children,
     colour,
     bold,
     textAlign,
     style,
-  } = props;
+  }: InferProps<typeof Heading.propTypes>) {
 
   const Tag = `h${level}`;
+  const props = {
+    style,
+    css: css`
+    color: ${colour};
+    font-weight: ${bold ? 'bold' : 'normal'};
+    text-align: ${textAlign};
+    `
+  }
   return (
-    <Tag
-      style={style}
-      css={css`
-        color: ${colour};
-        font-weight: ${bold ? 'bold' : 'normal'};
-        text-align: ${textAlign};
-      `}
-    >
+    <Tag {...props}>
       { children }
     </Tag>
   );
 }
 
 Heading.propTypes = {
-  // Contents of Heaing
+  // Contents of Heading
   children: PropTypes.node.isRequired,
   // Level of Heading (H1, H2, H3...)
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),

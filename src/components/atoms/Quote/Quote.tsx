@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { InferProps } from 'prop-types';
 
-export default function Quote({ quote, author }) {
+export default function Quote({ quote, author }: InferProps<typeof Quote.propTypes>) {
   const parseQuote = `"${quote}" - `;
   return (
     <React.Fragment>

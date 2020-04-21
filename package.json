@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "author": "Jonathan Walker",
   "dependencies": {
-    "@emotion/core": "^10.0.9",
-    "@emotion/styled": "^10.0.9",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
     "classnames": "^2.2.6",
     "gatsby": "^2.1.31",
     "gatsby-background-image": "^0.8.3",
@@ -73,7 +73,7 @@
     "test": "jest",
     "lint:js": "eslint \"src/**/*.js\"",
     "lint": "npm run lint:js",
-    "type-check": "tsc --noEmit --skipLibCheck",
+    "type-check": "tsc --noEmit --skipLibCheck --resolveJsonModule",
     "type-check:watch": "npm run type-check -- --watch"
   },
   "repository": {

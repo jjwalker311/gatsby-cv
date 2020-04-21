@@ -110,8 +110,8 @@ export default function Spotlights({ items, title }) {
         responsiveStructure={`repeat(${items.length}, 1fr)`}
       >
         {
-          items.map(({ ...props }) => (
-            <Spotlight {...props} key={props.message} />
+          items.map(({ ...item }) => (
+            <Spotlight {...item} key={item.message} />
           ))
         }
       </ResponsivePanel>

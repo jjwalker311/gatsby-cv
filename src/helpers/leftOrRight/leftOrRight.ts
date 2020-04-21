@@ -7,7 +7,10 @@ import POSITION from 'constants/positions';
  * @param  {Component} Variable
  * @param  {String} position
  */
-export default function leftOrRight(Constant, Variable, position) {
+export default function leftOrRight(
+  Constant: import('React').ReactElement,
+  Variable: import('React').ReactElement,
+  position: string) {
   const container = [
     Constant,
   ];

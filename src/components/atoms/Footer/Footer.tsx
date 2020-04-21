@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { InferProps } from 'prop-types';
 import { css } from '@emotion/core';
 
 import ResponsivePanel from 'components/atoms/ResponsivePanel';
@@ -11,12 +11,12 @@ import COLOURS from 'constants/colours';
 
 import LocaleContext from 'locale';
 
-export default function Footer(props) {
+export default function Footer(props: InferProps<typeof Footer.propTypes>) {
   const {
     background,
   } = props;
 
-  const lang = useContext(LocaleContext).footer;
+  const { footer: lang } = useContext(LocaleContext);
 
   return (
     <div css={css`
@@ -60,5 +60,5 @@ Footer.propTypes = {
 };
 
 Footer.defaultProps = {
-  background: COLOURS.BACKGROUND.GRAY,
+  background: COLOURS.BACKGROUND.GREY,
 };

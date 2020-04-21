@@ -1,12 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { InferProps } from 'prop-types';
 import { css } from '@emotion/core';
 
 import COLOURS from 'constants/colours';
 import FONT_SIZES from 'constants/fontSizes';
 import FONT_TRANSFORM from 'constants/fontTransform';
 
-export default function Button(props) {
+export default function Button(props: InferProps<typeof Button.propTypes>) {
   const {
     onClick,
     children,
@@ -46,13 +46,13 @@ Button.propTypes = {
   // Text displayed within button
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   // Function triggered on click
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
   // Whether to display caption in all CAPS
   textTransform: PropTypes.string,
   // Text colour
   color: PropTypes.string,
   // Size of font
-  fontSize: PropTypes.oneOf([FONT_SIZES.SMALL, FONT_SIZES.MEDIUM, FONT_SIZES.SMALL.LARGE]),
+  fontSize: PropTypes.oneOf([FONT_SIZES.SMALL, FONT_SIZES.MEDIUM, FONT_SIZES.LARGE]),
   // Whether to be bold or not
   bold: PropTypes.bool,
   // Background colour

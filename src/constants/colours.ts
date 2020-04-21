@@ -1,4 +1,6 @@
-export const COLOURS = {
+
+
+export const COLOURS = Object.freeze({
   PRIMARY: '#5F464B',
   SECONDARY: '#8E4A49',
   LIGHT: '#ffffff',
@@ -22,6 +24,6 @@ export const COLOURS = {
     DEFAULT: '#d1461c',
     HOVER: '#a63614',
   },
-};
+});
 
 export default COLOURS;

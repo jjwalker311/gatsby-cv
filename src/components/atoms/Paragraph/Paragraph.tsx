@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { InferProps } from 'prop-types';
 import { css } from '@emotion/core';
 
 import COLOURS from 'constants/colours';
 import BREAKPOINTS from 'constants/breakpoints';
 
-export default function Paragraph(props) {
+export default function Paragraph(props: InferProps<typeof Paragraph.propTypes>) {
   const {
     children,
     bold,
@@ -18,12 +18,12 @@ export default function Paragraph(props) {
 
   return (
     <p
-      style={style}
-      className={className}
+      style={style!}
+      className={className!}
       css={css`
             color: ${color};
             font-weight: ${bold ? 'bold' : 'normal'};
-            font-size: ${fontSize + 1}px;
+            font-size: ${fontSize! + 1}px;
             @media (min-width: ${BREAKPOINTS.TABLET}px) {
               font-size: ${fontSize}px;
             }
@@ -37,7 +37,7 @@ export default function Paragraph(props) {
 
 Paragraph.propTypes = {
   // Contents of Heading
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   // Whether to be bold or not
   bold: PropTypes.bool,
   // Text colour
