@@ -5,6 +5,7 @@ module.exports = {
     author: `@jonathanjwalker`,
   },
   plugins: [
+    'gatsby-plugin-netlify',
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
